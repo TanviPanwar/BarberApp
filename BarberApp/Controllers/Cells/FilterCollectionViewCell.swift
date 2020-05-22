@@ -16,15 +16,29 @@ class FilterCollectionViewCell: UICollectionViewCell {
 
 class OptionsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var serviceAtHomeSwitchBtn: UISwitch!
+    
+    @IBOutlet weak var openNowSwitchBtn: UISwitch!
+    @IBOutlet weak var hasCreditCardSwitchBtn: UISwitch!
 }
 
 class PriceCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var maxPriceBtn: RoundedButton!
+    @IBOutlet weak var mediumPriceBtn: RoundedButton!
+    @IBOutlet weak var cheapPriceBtn: RoundedButton!
 }
 class DistanceCollectionViewCell: UICollectionViewCell {
+ 
+    
     @IBOutlet weak var rangeSlider: RangeSeekSlider!
     
 }
 class SortCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var popularitySwitchBtn: UISwitch!
+    @IBOutlet weak var ratingSwitchBtn: UISwitch!
+    @IBOutlet weak var priceSwitchBtn: UISwitch!
 }
+
+

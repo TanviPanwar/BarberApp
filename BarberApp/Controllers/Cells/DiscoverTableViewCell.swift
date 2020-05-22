@@ -12,6 +12,17 @@ class DiscoverTableViewCell: UITableViewCell {
     @IBOutlet weak var coverImgViw: UIImageView!
     @IBOutlet weak var ratingViw: UIView!
     
+    @IBOutlet weak var timerCollectionView: UICollectionView!
+    @IBOutlet weak var serviceTypeLbl: UILabel!
+    @IBOutlet weak var avgRatingLbl: UILabel!
+    @IBOutlet weak var shopNameLbl: UILabel!
+    @IBOutlet weak var ratingLbl: UILabel!
+    @IBOutlet weak var numberOfCustomerLbl: UILabel!
+    @IBOutlet weak var nationalityLbl: UILabel!
+    @IBOutlet weak var bookNowBtn: RoundedButton!
+    @IBOutlet weak var salonStatusLbl: UILabel!
+    @IBOutlet weak var salonAddressLbl: UILabel!
+    @IBOutlet weak var barbarNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         coverImgViw.roundCorners(corners: [.topLeft, .topRight], radius: 15)

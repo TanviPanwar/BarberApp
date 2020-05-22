@@ -8,12 +8,24 @@
 
 import UIKit
 import GoogleMaps
+import HCSStarRatingView
+import SDWebImage
 
 class TopSliderTableViewCell: UITableViewCell , UIScrollViewDelegate{
+    @IBOutlet weak var nationalityLbl: UILabel!
     
+    @IBOutlet weak var shopTypeLbl: UILabel!
+    @IBOutlet weak var avgRatingLbl: UILabel!
+    @IBOutlet weak var numberOfCustomerLbl: UILabel!
+    @IBOutlet weak var salonOpenStatusLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var barberNameLbl: UILabel!
+    @IBOutlet weak var shareBtn: UIButton!
+    @IBOutlet weak var likeStatusBtn: UIButton!
+    @IBOutlet weak var serviceTypeLbl: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var sliderViw: UIView!
-    var slideImgArray = [UIImage]()
+    var slideImgArray = [String]()
     var scrollViw = UIScrollView()
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,13 +48,14 @@ class TopSliderTableViewCell: UITableViewCell , UIScrollViewDelegate{
         {
             
             let imageView :UIImageView = UIImageView(frame: CGRect(x: CGFloat(i) *  UIScreen.main.bounds.size.width , y: 0, width: UIScreen.main.bounds.size.width, height: sliderViw.frame.size.height - height))
-            imageView.image = slideImgArray[i]
+            imageView.sd_setImage(with: URL(string: slideImgArray[i]), completed: nil)
             imageView.contentMode = .scaleToFill
             let viw = UIView(frame: CGRect(x: CGFloat(i) *  UIScreen.main.bounds.size.width , y: 0, width: UIScreen.main.bounds.size.width, height: sliderViw.frame.size.height - height))
             viw.backgroundColor = UIColor.black.withAlphaComponent(0.45)
             self.scrollViw.addSubview(imageView)
-            self.scrollViw.addSubview(viw)
+           self.scrollViw.addSubview(viw)
         }
+       // scrollViw.backgroundColor = .white
         pageControl.numberOfPages = slideImgArray.count
         scrollViw.isPagingEnabled = true
         scrollViw.showsHorizontalScrollIndicator = false
@@ -66,6 +79,9 @@ class TopSliderTableViewCell: UITableViewCell , UIScrollViewDelegate{
 
 class MiddleInstagramCell: UITableViewCell {
     
+    @IBOutlet weak var instaPhotoTitleLbl: UILabel!
+    @IBOutlet weak var aboutDescriptionLbl: UILabel!
+    @IBOutlet weak var aboutTitleLbl: UILabel!
     @IBOutlet weak var instaCollectionViw: UICollectionView!
     @IBOutlet weak var collectionHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -86,6 +102,7 @@ class MiddleInstagramCell: UITableViewCell {
 }
 class InstaCollectionCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: RoundedImageView!
     
 }
 class TimeScheduleCell: UITableViewCell {
@@ -93,6 +110,7 @@ class TimeScheduleCell: UITableViewCell {
     @IBOutlet weak var slotsCollectionViw: UICollectionView!
     
     
+    @IBOutlet weak var totalPriceLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -109,6 +127,7 @@ class TimeScheduleCell: UITableViewCell {
 }
 class AvailablityCell: UITableViewCell {
     
+    @IBOutlet weak var availableTimeLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -125,6 +144,9 @@ class AvailablityCell: UITableViewCell {
 }
 class ServiceDetailCell: UITableViewCell {
     
+    @IBOutlet weak var serviceSwitchBtn: UISwitch!
+    @IBOutlet weak var servicePriceLbl: UILabel!
+    @IBOutlet weak var serviceNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -159,6 +181,8 @@ class MapCell: UITableViewCell {
 }
 class RatingTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var ratingCollectionView: UICollectionView!
+    @IBOutlet weak var avgRatingLbl: UILabel!
     @IBOutlet weak var ratingViw: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -176,10 +200,14 @@ class RatingTableViewCell: UITableViewCell {
 }
 class RatingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var commentLbl: UILabel!
+    @IBOutlet weak var ratingView: HCSStarRatingView!
+    @IBOutlet weak var userNameLbl: UILabel!
     
 }
 class RecommendedTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var seeAllBtn: UIButton!
     @IBOutlet weak var recommendedCollection: UICollectionView!
     
     
@@ -199,6 +227,14 @@ class RecommendedTableViewCell: UITableViewCell {
 }
 class RecommendedCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var avgRatingLbl: UILabel!
+    @IBOutlet weak var closeTimeLbl: UILabel!
+    @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var imageView: RoundedImageView!
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var ratingViw: UIView!
     
+    @IBOutlet weak var salonTimeStatusLbl: UILabel!
 }

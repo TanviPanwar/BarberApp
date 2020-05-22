@@ -1,0 +1,77 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AssetsPickerViewController (2.7.5):
+    - Device
+    - SnapKit
+  - Cosmos (21.0.0)
+  - Device (3.2.1)
+  - GoogleMaps (3.8.0):
+    - GoogleMaps/Maps (= 3.8.0)
+  - GoogleMaps/Base (3.8.0)
+  - GoogleMaps/Maps (3.8.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.8.0):
+    - GoogleMaps/Base (= 3.8.0)
+  - HCSStarRatingView (1.5)
+  - IQKeyboardManagerSwift (6.5.5)
+  - MRCountryPicker (0.0.8)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - RangeSeekSlider (1.8.0)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+  - SnapKit (5.0.1)
+  - SwiftyGif (5.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AssetsPickerViewController
+  - Cosmos (~> 21.0)
+  - GoogleMaps
+  - GooglePlaces
+  - HCSStarRatingView
+  - IQKeyboardManagerSwift
+  - MRCountryPicker
+  - NVActivityIndicatorView
+  - RangeSeekSlider
+  - SDWebImage (~> 4.0)
+  - SwiftyGif
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AssetsPickerViewController
+    - Cosmos
+    - Device
+    - GoogleMaps
+    - GooglePlaces
+    - HCSStarRatingView
+    - IQKeyboardManagerSwift
+    - MRCountryPicker
+    - NVActivityIndicatorView
+    - RangeSeekSlider
+    - SDWebImage
+    - SnapKit
+    - SwiftyGif
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AssetsPickerViewController: 6954aff04b95d26be0d65a58557a9dfbef7811c3
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  MRCountryPicker: 1aeea66de25cdef79dce3b91d8ad9db643c1cc01
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
+
+PODFILE CHECKSUM: 3cbac3ac83d72b2d20c4c039d166ef54c6dfd072
+
+COCOAPODS: 1.8.4

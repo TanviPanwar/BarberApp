@@ -21,7 +21,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        LocationService.sharedInstance
+
         
         // Do any additional setup after loading the view.
         
@@ -34,16 +35,35 @@ class HomeViewController: UIViewController {
         
         if #available(iOS 13.0, *) {
             
-            let vc = homeStoryBoard.instantiateViewController(identifier:"TopNearByBarbersController") as! TopNearByBarbersController
+            let vc = homeStoryBoard.instantiateViewController(identifier:"DiscoverViewController") as! DiscoverViewController
             self.navigationController?.pushViewController(vc, animated: true)
 
         } else {
             // Fallback on earlier versions
             
-            let vc = homeStoryBoard.instantiateViewController(withIdentifier:"TopNearByBarbersController") as! TopNearByBarbersController
+            let vc = homeStoryBoard.instantiateViewController(withIdentifier:"DiscoverViewController") as! DiscoverViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    
+    func navigateToDiscoverVC(service_type_id :String = "")  {
+        
+        if #available(iOS 13.0, *) {
+            
+            let vc = homeStoryBoard.instantiateViewController(identifier:"DiscoverViewController") as! DiscoverViewController
+            vc.selectedServiceType = service_type_id
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        } else {
+            // Fallback on earlier versions
+            
+            let vc = homeStoryBoard.instantiateViewController(withIdentifier:"DiscoverViewController") as! DiscoverViewController
+             vc.selectedServiceType = service_type_id
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
     // MARK: - IB Actions
     
@@ -52,6 +72,26 @@ class HomeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func compareTime(time:String) -> Bool {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let todayDate = dateFormatter.string(from: Date())
+       
+        guard let date1 = dateFormatter.date(from: todayDate) ,let date2 = dateFormatter.date(from: time)  else { return false }
+        print(date1)
+        print(date2)
+         if date1 > date2
+         {
+            return true
+        }
+      else
+         {
+            return false
+        }
+      
+       
+    }
     
     // MARK: - Api Methods
     
@@ -214,7 +254,7 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
             let seeAllBtn = UIButton(frame: CGRect(x:UIScreen.main.bounds.size.width - 150, y: 18, width: 120, height: 25))
             seeAllBtn.contentHorizontalAlignment = .right
             seeAllBtn.titleLabel?.textAlignment = .right
-            seeAllBtn.setTitle("See all (177)", for: .normal)
+            seeAllBtn.setTitle("See all (\(topBarberArray.count))", for: .normal)
             seeAllBtn.titleLabel?.font = UIFont(name:"Avenir-Medium", size: 15)
             seeAllBtn.setTitleColor(.darkGray, for: .normal)
             seeAllBtn.addTarget(self, action: #selector(navigateToSeeAllBarbers), for: .touchUpInside)
@@ -234,6 +274,7 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
             cell.mybarbersCollectionViw.tag = indexPath.section
             cell.sectionLbl.text = "My Barbers"
             cell.seeAllBtn.isHidden = true
+          
             if let flowLayout = cell.mybarbersCollectionViw.collectionViewLayout as? UICollectionViewFlowLayout {
                 flowLayout.scrollDirection = .horizontal
                 
@@ -246,6 +287,8 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
             cell.mybarbersCollectionViw.tag = indexPath.section
             cell.sectionLbl.text = "Services"
             cell.seeAllBtn.isHidden = false
+            cell.seeAllBtn.setTitle("See all (\(serviceListArray.count))", for: .normal)
+            cell.seeAllBtn.addTarget(self, action: #selector(navigateToSeeAllBarbers), for: .touchUpInside)
             if let flowLayout = cell.mybarbersCollectionViw.collectionViewLayout as? UICollectionViewFlowLayout {
                 flowLayout.minimumLineSpacing = 10
                 flowLayout.scrollDirection = .vertical
@@ -258,6 +301,18 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier:"NearbyBarbersCell", for: indexPath) as? NearbyBarbersCell else {return UITableViewCell()}
             
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "HH:mm:ss"
+//             var closedDate = ""
+//            if let date =  dateFormatter.date(from: topBarberArray[indexPath.row].barber_start_time)
+//            {
+//                dateFormatter.dateFormat = "HH:mm a"
+//                closedDate = dateFormatter.string(from: date)
+//                if closedDate == "00:00 AM" {
+//                    closedDate = "12:00 AM"
+//                }
+//            }
+             let result = compareTime(time: topBarberArray[indexPath.row].barber_close_time)
             cell.userImgViw.sd_setImage(with: URL(string : self.topBarberArray[indexPath.row].image), placeholderImage:nil, options: [.cacheMemoryOnly]) { (image, error, cache, url) in
 
             }
@@ -266,7 +321,7 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
             cell.barberNationalityLabel.text = topBarberArray[indexPath.row].nationality + " Provides " + topBarberArray[indexPath.row].service_type + " service"
              cell.closeStatusLabel.text = "Closes " + topBarberArray[indexPath.row].barber_close_time
             cell.ratingLabel.text = topBarberArray[indexPath.row].avg_rating
-            
+            cell.priceRangeLabel.text = topBarberArray[indexPath.row].price_range
             
           
             return cell
@@ -278,6 +333,30 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
         
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 2:
+            if #available(iOS 13.0, *) {
+                       
+                       let vc = homeStoryBoard.instantiateViewController(identifier:"BarberDetailViewController") as! BarberDetailViewController
+                print(topBarberArray[indexPath.row].user_id)
+               // vc.service_provider_id = topBarberArray[indexPath.row].user_id
+                       self.navigationController?.pushViewController(vc, animated: true)
+
+                   } else {
+                       // Fallback on earlier versions
+                       
+                       let vc = homeStoryBoard.instantiateViewController(withIdentifier:"BarberDetailViewController") as! BarberDetailViewController
+                //  vc.service_provider_id = topBarberArray[indexPath.row].user_id
+                       self.navigationController?.pushViewController(vc, animated: true)
+                   }
+        default:
+            return
+        }
+        
+    }
     
     
 }
@@ -299,6 +378,17 @@ extension HomeViewController:UICollectionViewDelegate , UICollectionViewDataSour
             
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 1 {
+           navigateToDiscoverVC(service_type_id: serviceListArray[indexPath.row].id)
+        }
+        else{
+            return
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"MyBarbersCollectionCell", for: indexPath) as? MyBarbersCollectionCell else {return UICollectionViewCell()}

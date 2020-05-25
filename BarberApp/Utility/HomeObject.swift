@@ -44,6 +44,7 @@ class HomeObject: NSObject {
     var service_type = String()
 
     var available_time = [HomeObject]()
+    var additional_info = [String]()
     
     
     

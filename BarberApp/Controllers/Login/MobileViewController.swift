@@ -14,6 +14,7 @@ import Alamofire
 class MobileViewController: UIViewController {
     @IBOutlet weak var flag_ImgViw: UIImageView!
     
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var mobile_TxtFld: UITextField!
     @IBOutlet weak var countrycode_Lbl: UILabel!
     @IBOutlet weak var countryPicker: MRCountryPicker!
@@ -22,9 +23,22 @@ class MobileViewController: UIViewController {
     var countryCode = String()
     var flagImg = UIImage()
     var launchBool = Bool()
+    var LogoutBool = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if LogoutBool {
+            
+            backBtn.isHidden = true
+            
+        } else {
+            
+            backBtn.isHidden = true
+            
+
+        }
+        
         countryPicker.tintColor = .black
         countryPicker.countryPickerDelegate = self
         countryPicker.showPhoneNumbers = true

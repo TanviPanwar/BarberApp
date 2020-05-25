@@ -86,14 +86,14 @@ class DiscoverViewController: UIViewController {
             self.listBtn.setTitleColor(#colorLiteral(red: 0.05763856322, green: 0.2982799113, blue: 0.5071055889, alpha: 1), for: .normal)
         if #available(iOS 13.0, *) {
                   
-                  let vc = homeStoryBoard.instantiateViewController(identifier:"MapViewController") as! MapViewController
+                  let vc = mainStoryBoard.instantiateViewController(identifier:"MapViewController") as! MapViewController
                 
             self.navigationController?.pushViewController(vc, animated: true)
                   
               } else {
                   // Fallback on earlier versions
                   
-                  let vc = homeStoryBoard.instantiateViewController(withIdentifier:"MapViewController") as! MapViewController
+                  let vc = mainStoryBoard.instantiateViewController(withIdentifier:"MapViewController") as! MapViewController
              self.navigationController?.pushViewController(vc, animated: true)
         }
         

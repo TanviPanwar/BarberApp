@@ -234,7 +234,22 @@ class HelpViewController: UIViewController, UITextViewDelegate {
                         let msg = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"message", dict: json as NSDictionary)
                         if status.boolValue {
                             
+                            
+                            
+                            CATransaction.begin()
+                            CATransaction.setCompletionBlock({
+                                // handle completion here
+                                ProjectManager.sharedInstance.showAlertwithTitle(title:"", desc: msg as String, vc: self)
+                                
+                                
+                            })
+                            
                             self.navigationController?.popViewController(animated: true)
+
+                            CATransaction.commit()
+                            
+                            
+                            //self.navigationController?.popViewController(animated: true)
 
                             
                             

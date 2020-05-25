@@ -31,7 +31,10 @@
 		0C784B75242D06FC009DE401 /* ComplainBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C784B74242D06FC009DE401 /* ComplainBookingViewController.swift */; };
 		0C784B77242E3B45009DE401 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C784B76242E3B45009DE401 /* ThankYouViewController.swift */; };
 		0C7932E6242B22160077D5A5 /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7932E5242B22160077D5A5 /* SelectServicesViewController.swift */; };
+		0C8FFE3F247833FC00E8E579 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE3E247833FC00E8E579 /* CustomUITextField.swift */; };
 		0CA681532473E65A00E2992D /* TermsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA681522473E65A00E2992D /* TermsObject.swift */; };
+		0CB0361524780979008AB11A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB0361424780979008AB11A /* Home.storyboard */; };
+		0CB0361724780983008AB11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB0361624780983008AB11A /* Main.storyboard */; };
 		0CD02EE424236AAC0009F577 /* ProfileNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD02EE324236AAC0009F577 /* ProfileNotificationsViewController.swift */; };
 		0CD02EE62423707E0009F577 /* CompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD02EE52423707E0009F577 /* CompleteProfileViewController.swift */; };
 		0CD02EE8242371E10009F577 /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD02EE7242371E10009F577 /* AdditionalInfoViewController.swift */; };
@@ -81,8 +84,6 @@
 		0FE3A6F924234A3C00C152CA /* CustomerAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6F824234A3C00C152CA /* CustomerAddressViewController.swift */; };
 		0FE3A6FB24234A8400C152CA /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6FA24234A8300C152CA /* ProjectManager.swift */; };
 		0FE3A6FE2423670100C152CA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6FD2423670100C152CA /* HelpViewController.swift */; };
-		A226E6B22477F97C00B2BBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A226E6B12477F97C00B2BBAB /* Main.storyboard */; };
-		A226E6B62477F9FF00B2BBAB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A226E6B52477F9FE00B2BBAB /* Home.storyboard */; };
 		A226E6BE2477FD7D00B2BBAB /* BarberDetailsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A226E6B72477FD7B00B2BBAB /* BarberDetailsObject.swift */; };
 		A226E6BF2477FD7D00B2BBAB /* NationalityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A226E6B82477FD7C00B2BBAB /* NationalityObject.swift */; };
 		A226E6C02477FD7D00B2BBAB /* Constants2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A226E6B92477FD7C00B2BBAB /* Constants2.swift */; };
@@ -118,7 +119,10 @@
 		0C784B74242D06FC009DE401 /* ComplainBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainBookingViewController.swift; sourceTree = "<group>"; };
 		0C784B76242E3B45009DE401 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		0C7932E5242B22160077D5A5 /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
+		0C8FFE3E247833FC00E8E579 /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
 		0CA681522473E65A00E2992D /* TermsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsObject.swift; sourceTree = "<group>"; };
+		0CB0361424780979008AB11A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0CB0361624780983008AB11A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0CD02EE324236AAC0009F577 /* ProfileNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNotificationsViewController.swift; sourceTree = "<group>"; };
 		0CD02EE52423707E0009F577 /* CompleteProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfileViewController.swift; sourceTree = "<group>"; };
 		0CD02EE7242371E10009F577 /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
@@ -173,8 +177,6 @@
 		0FE3A6FD2423670100C152CA /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4457E72A6C7AEA0F46BDAD32 /* Pods-BarberApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarberApp.debug.xcconfig"; path = "Target Support Files/Pods-BarberApp/Pods-BarberApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89AAF1FB86D4E440D52AFB1D /* Pods-BarberApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarberApp.release.xcconfig"; path = "Target Support Files/Pods-BarberApp/Pods-BarberApp.release.xcconfig"; sourceTree = "<group>"; };
-		A226E6B12477F97C00B2BBAB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A226E6B52477F9FE00B2BBAB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A226E6B72477FD7B00B2BBAB /* BarberDetailsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarberDetailsObject.swift; sourceTree = "<group>"; };
 		A226E6B82477FD7C00B2BBAB /* NationalityObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalityObject.swift; sourceTree = "<group>"; };
 		A226E6B92477FD7C00B2BBAB /* Constants2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants2.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				0C75EF162460189C0081A3CD /* ServiceObject.swift */,
 				0C716BCD246D2AE400AB25B3 /* AdditionalInfoObject.swift */,
 				0CA681522473E65A00E2992D /* TermsObject.swift */,
+				0C8FFE3E247833FC00E8E579 /* CustomUITextField.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -305,8 +308,8 @@
 		0F359802241275AB007196C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A226E6B52477F9FE00B2BBAB /* Home.storyboard */,
-				A226E6B12477F97C00B2BBAB /* Main.storyboard */,
+				0CB0361424780979008AB11A /* Home.storyboard */,
+				0CB0361624780983008AB11A /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,11 +580,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A226E6B62477F9FF00B2BBAB /* Home.storyboard in Resources */,
+				0CB0361724780983008AB11A /* Main.storyboard in Resources */,
 				0F1088C82411144600E4AF5A /* LaunchScreen.storyboard in Resources */,
 				0F1088C52411144600E4AF5A /* Assets.xcassets in Resources */,
 				0C34BACF244DB27500D0CD78 /* country.json in Resources */,
-				A226E6B22477F97C00B2BBAB /* Main.storyboard in Resources */,
+				0CB0361524780979008AB11A /* Home.storyboard in Resources */,
 				0C75EF11245E2EED0081A3CD /* ios-animation.gif in Resources */,
 				0C67B16B24584E780084CF2E /* languages.json in Resources */,
 			);
@@ -727,6 +730,7 @@
 				A226E6C22477FD7D00B2BBAB /* BarbarDiscoverObject.swift in Sources */,
 				0FA177F22424AC3A0050D625 /* RegisterBarberShopController.swift in Sources */,
 				0F1088D124112FAC00E4AF5A /* IBDesignableClass.swift in Sources */,
+				0C8FFE3F247833FC00E8E579 /* CustomUITextField.swift in Sources */,
 				0C4F2A0D2428EEF200B66529 /* ReceiveJobsViewController.swift in Sources */,
 				0C653D3B245002B800FC2437 /* OtpVerificationController.swift in Sources */,
 			);

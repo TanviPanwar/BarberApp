@@ -313,9 +313,12 @@ extension HomeViewController:UITableViewDelegate , UITableViewDataSource {
 //                }
 //            }
              let result = compareTime(time: topBarberArray[indexPath.row].barber_close_time)
-            cell.userImgViw.sd_setImage(with: URL(string : self.topBarberArray[indexPath.row].image), placeholderImage:nil, options: [.cacheMemoryOnly]) { (image, error, cache, url) in
+            
+            cell.userImgViw.sd_setImage(with: URL(string : self.topBarberArray[indexPath.row].additional_info[0]), placeholderImage:nil, options: [.cacheMemoryOnly]) { (image, error, cache, url) in
 
-            }
+            }  //self.topBarberArray[indexPath.row].image
+            
+            
             cell.barberNameLabel.text = topBarberArray[indexPath.row].barber_name
             cell.barberAddressLabel.text = topBarberArray[indexPath.row].saloon_location
             cell.barberNationalityLabel.text = topBarberArray[indexPath.row].nationality + " Provides " + topBarberArray[indexPath.row].service_type + " service"

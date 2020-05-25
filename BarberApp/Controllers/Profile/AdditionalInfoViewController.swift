@@ -15,6 +15,7 @@ import AVFoundation
 import AVKit
 import MediaPlayer
 import Alamofire
+import IQKeyboardManagerSwift
 
 class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate , UINavigationControllerDelegate, UIDocumentPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate, getTokenDelegate {
     
@@ -26,12 +27,17 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     
     
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var addInfoTableView: UITableView!
     @IBOutlet weak var mediaCollectionView: UICollectionView!
     @IBOutlet weak var addMediaBtn: UIButton!
     @IBOutlet weak var aboutView: UIView!
-    @IBOutlet weak var aboutTextView: UITextView!
+    
+    @IBOutlet weak var aboutTextView: IQTextView!
+    
+    //@IBOutlet weak var aboutTextView: UITextView!
+    
     @IBOutlet weak var aboutCountLabel: UILabel!
     @IBOutlet weak var motherToungeTextfield: UITextField!
     @IBOutlet weak var secondLanguageTextField: UITextField!
@@ -91,6 +97,7 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     var passImage = UIImage()
     var uniqueImageArray = [UIImage]()
     var profileBool = Bool()
+    var nameStr = String()
     
    
 
@@ -112,7 +119,7 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
         } else {
             
             saveBtn.isHidden = true
-            setupScheduleBtn.isHidden = true
+            setupScheduleBtn.isHidden = false
 
 
         }
@@ -189,7 +196,7 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
         // if you want to limit to 55 charakters
         // you need to return true and <= 55
 
-        return length <= 500
+        return length <= 499
         
         
         
@@ -202,8 +209,11 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     
     func setupUI() {
         
+        
+        nameLabel.text = "About " + nameStr
         addMediaBtn.roundCorners(corners: [.allCorners], radius: addMediaBtn.frame.size.height/2)
         aboutView.setBorder(width: 1, color: #colorLiteral(red: 0.8117647059, green: 0.800083518, blue: 0.7998213172, alpha: 1))
+        
         
         aboutTextView.text = addinfoProfileObjc.about
         
@@ -368,17 +378,17 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                 ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Mother tounge is required", vc: self)
                 
                 
-            } else if addinfoProfileObjc.qtr_front_id.isEmpty  {
+            } else if addinfoProfileObjc.frontID.isEmpty  {
                 
                 ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Front Qatar ID is required", vc: self)
                 
                 
-            } else if addinfoProfileObjc.qtr_back_id.isEmpty  {
+            } else if addinfoProfileObjc.backID.isEmpty  {
                 
                 ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Back Qatar ID is required", vc: self)
                 
                 
-            } else if addinfoProfileObjc.passport.isEmpty  {
+            } else if addinfoProfileObjc.passID.isEmpty  {
                 
                 ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Passport cover photo is required", vc: self)
                 
@@ -498,17 +508,21 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
             ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Mother tounge is required", vc: self)
             
             
-        } else if addinfoProfileObjc.qtr_front_id.isEmpty  {
+        } else if addinfoProfileObjc.frontID.isEmpty   //qtr_front_id
+        
+        {
             
             ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Front Qatar ID is required", vc: self)
             
             
-        } else if addinfoProfileObjc.qtr_back_id.isEmpty  {
+        } else if addinfoProfileObjc.backID.isEmpty    //qtr_back_id
+        
+        {
             
             ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Back Qatar ID is required", vc: self)
             
             
-        } else if addinfoProfileObjc.passport.isEmpty  {
+        } else if addinfoProfileObjc.passID.isEmpty  {  //passport
             
             ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Passport cover photo is required", vc: self)
             
@@ -1155,11 +1169,13 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                     
                 }
                 
-                
+                if self.addinfoProfileObjc.additional_info.count > 0 {
                 if !self.addinfoProfileObjc.additional_info[indexPath.row].isEmpty {
                     
                     self.addinfoProfileObjc.additional_info.remove(at: indexPath.row)
                 }
+                    
+            }
             
             }
         }
@@ -1794,7 +1810,7 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
             if self?.uploadTag == 0 {
                 
                 self?.frontIDData = image.jpegData(compressionQuality: 0.1)!
-                self?.addinfoProfileObjc.qtr_front_id = "0"
+                self?.addinfoProfileObjc.qtr_front_id = ""    //"0"
                 self?.frontImage = image
                 
                 self?.addInfoTableView.reloadData()
@@ -1807,7 +1823,7 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
             } else if self?.uploadTag == 1 {
                 
                 self?.backIDData = image.jpegData(compressionQuality: 0.1)!
-                self?.addinfoProfileObjc.qtr_back_id = "1"
+                self?.addinfoProfileObjc.qtr_back_id = "" // "1"
                 self?.backImage = image
                 
                 self?.addInfoTableView.reloadData()
@@ -1822,7 +1838,7 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
             } else if self?.uploadTag == 2 {
                 
                 self?.passportData = image.jpegData(compressionQuality: 0.1)!
-                self?.addinfoProfileObjc.passport = "2"
+                self?.addinfoProfileObjc.passport = ""    //"2"
                 self?.passImage = image
                 
                 self?.addInfoTableView.reloadData()

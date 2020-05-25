@@ -354,7 +354,12 @@ class ProjectManager: NSObject {
             obj.about = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "about", dict: dict as NSDictionary) as String
             
             
-            
+            if  let additional_info = dict["additional_info"] as? NSArray, additional_info.count > 0 {
+                
+                obj.additional_info = additional_info as! [String]
+                
+            }
+
             if  let available_time = dict["available_time"] as? NSArray {
                 
                 for i in available_time {

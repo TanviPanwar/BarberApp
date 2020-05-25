@@ -123,6 +123,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBAction func listBtnAction(_ sender: Any) {
         
         
+        if #available(iOS 13.0, *) {
+                  
+                  let vc = homeStoryBoard.instantiateViewController(identifier:"DiscoverViewController") as! DiscoverViewController
+                
+            self.navigationController?.pushViewController(vc, animated: true)
+                  
+              } else {
+                  // Fallback on earlier versions
+                  
+                  let vc = homeStoryBoard.instantiateViewController(withIdentifier:"DiscoverViewController") as! DiscoverViewController
+             self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        
     }
     
     @IBAction func mapBtnAction(_ sender: Any) {

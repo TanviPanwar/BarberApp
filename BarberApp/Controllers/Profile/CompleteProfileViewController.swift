@@ -468,6 +468,8 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                                                 
                                                 vc.freelanceBool = false
                                             }
+                                        
+                                            vc.nameStr = self.profileObjc.first_name
                                             self.present(vc, animated: true, completion: nil)
                                         
                                     } else {
@@ -481,6 +483,9 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                                             
                                             vc.freelanceBool = false
                                         }
+                                        
+                                        vc.nameStr = self.profileObjc.first_name
+
                                         self.present(vc, animated: true, completion: nil)
                                     }
 

@@ -303,14 +303,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     if providerStatus == "0" ||   providerStatus == "4" {
                         
                         titleStr = "Submitted - Currently being reviewed"
-                        
+                        cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0.8933240771, green: 0.5590150356, blue: 0.1771246195, alpha: 1), for: .normal)
+
                     } else if providerStatus == "1" {
                         
                         titleStr = "Approved - You can accept bookings"
+                        cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), for: .normal)
+
                         
                     }  else if providerStatus == "2" {
                         
                         titleStr = "Declined -  Photo Not Clear"
+                        cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0.8933240771, green: 0.5590150356, blue: 0.1771246195, alpha: 1), for: .normal)
+
                         
                     }
                     
@@ -319,7 +324,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     cell.cellImage.isHidden = false
                     cell.availabilityBtn.isHidden = true
                     
-                    cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0.8933240771, green: 0.5590150356, blue: 0.1771246195, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.isEnabled = true
+
 
                     cell.onTitleButtonTapped = {
                         
@@ -332,7 +338,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     cell.cellImage.isHidden = false
                     cell.availabilityBtn.isHidden = true
                         
-                        cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.isEnabled = true
+
                    
                     cell.onTitleButtonTapped = {
                         
@@ -362,6 +370,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     cell.availabilityBtn.isHidden = true
                    
                     cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.isEnabled = true
+
 
                     cell.onTitleButtonTapped = {
                         
@@ -390,6 +400,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     cell.availabilityBtn.isHidden = true
                     
                     cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.isEnabled = true
+
 
                    
                     cell.onTitleButtonTapped = {
@@ -422,6 +434,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     cell.availabilityBtn.isHidden = false
                     
                     cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                    cell.cellTitleBtn.isEnabled = false
 
                     if availableStatus == "1" {
                         
@@ -908,6 +921,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                                        
                                        vc = mainStoryBoard.instantiateViewController(withIdentifier:"MobileViewController" ) as! MobileViewController
                                    }
+                            
+                                        vc.LogoutBool = true
                                        self.navigationController?.pushViewController(vc, animated: true)
                             
                             

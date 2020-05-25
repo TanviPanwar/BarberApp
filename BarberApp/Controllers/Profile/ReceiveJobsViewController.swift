@@ -169,7 +169,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
        // let endDate = "05:00 PM"
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm:ss"
+        formatter.dateFormat = "hh:mm:ss a"
 
        // let timeTocheck = "10:00 AM"
 
@@ -194,7 +194,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
        // let endDate = "05:00 PM"
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm:ss"
+        formatter.dateFormat = "hh:mm:ss a"
 
        // let timeTocheck = "10:00 AM"
 
@@ -459,8 +459,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date)) //dateFormat
                 
                 
                 if check {
@@ -486,8 +492,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 2}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date) //dateFormat
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)  //dateFormat
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -599,9 +605,13 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))  //dateFormat
                 
                 if value {
                     
@@ -627,8 +637,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 1}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date) //dateFormat
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)   //dateFormat
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -735,8 +745,13 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date)) //dateFormat
                 
                 
                 if check {
@@ -762,8 +777,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 4}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date) //dateFormat
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)   //dateFormat
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -873,9 +888,13 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))   //dateFormat
                 
                 if value {
                     
@@ -901,8 +920,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 3}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)  //dateFormat
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)  //dateFormat
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -1011,8 +1030,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 
                 if check {
@@ -1038,8 +1063,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 6}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date)
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -1149,9 +1174,13 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 if value {
                     
@@ -1177,8 +1206,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 5}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -1289,8 +1318,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 
                 if check {
@@ -1316,8 +1352,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 8}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date)
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -1427,9 +1463,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 if value {
                     
@@ -1455,8 +1497,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 7}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -1566,8 +1608,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 
                 if check {
@@ -1593,8 +1641,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 10}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date)
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -1704,9 +1752,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 if value {
                     
@@ -1732,8 +1785,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 9}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -1843,8 +1896,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 
                 if check {
@@ -1870,8 +1929,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 12}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date)
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -1981,9 +2040,13 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 if value {
                     
@@ -2009,8 +2072,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 11}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -2119,8 +2182,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss"
-                let check = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                let dateFormat1 =  DateFormatter()
+
+                dateFormat1.dateFormat = "hh:mm:ss a"
+                
+                
+                let check = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 
                 if check {
@@ -2146,8 +2216,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let index1 = array.firstIndex(where: {$0.identify == 14}) {
                                 
-                                let Sd = dateFormat.string(from: datePickerStart.date)
-                                let Ed = dateFormat.string(from: datePickerEnd.date)
+                                let Sd = dateFormat1.string(from: datePickerStart.date)
+                                let Ed = dateFormat1.string(from: datePickerEnd.date)
                                 
                                 let previousDate = array[index1].time_from
                                 let previousDate1 =  array[index1].time_to
@@ -2257,9 +2327,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss"
+                dateFormat.dateFormat = "hh:mm:ss a"
+                
+                
+                
+                let dateFormat1 =  DateFormatter()
 
-                let value = eachTimeCompare(startDate: dateFormat.string(from: datePickerStart.date), endDate: dateFormat.string(from: datePickerEnd.date))
+                dateFormat1.dateFormat = "hh:mm:ss a"
+
+                let value = eachTimeCompare(startDate: dateFormat1.string(from: datePickerStart.date), endDate: dateFormat1.string(from: datePickerEnd.date))
                 
                 if value {
                     
@@ -2285,8 +2361,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let index1 = array.firstIndex(where: {$0.identify == 13}) {
                                         
-                                        let Sd = dateFormat.string(from: datePickerStart.date)
-                                        let Ed = dateFormat.string(from: datePickerEnd.date)
+                                        let Sd = dateFormat1.string(from: datePickerStart.date)
+                                        let Ed = dateFormat1.string(from: datePickerEnd.date)
                                         
                                         let previousDate = array[index1].time_from
                                         let previousDate1 =  array[index1].time_to
@@ -2632,7 +2708,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a" // "hh:mm:ss"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2732,7 +2808,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2841,7 +2917,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2944,7 +3020,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3049,7 +3125,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3155,7 +3231,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3260,7 +3336,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss"
+                    format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {

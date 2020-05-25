@@ -351,6 +351,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ah9-Q8-MHG"/>
                     <connections>
+                        <outlet property="backBtn" destination="NBq-NA-Yey" id="CdA-V1-qxO"/>
                         <outlet property="countryPicker" destination="n5C-7R-2hO" id="Fxt-pX-vGj"/>
                         <outlet property="countrycode_Lbl" destination="1GY-Im-JQV" id="WAP-JL-Q61"/>
                         <outlet property="flag_ImgViw" destination="5T6-Rg-lRf" id="Uqp-qN-xbh"/>
@@ -3336,10 +3337,9 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Tanvi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6t-oK-Z4i">
-                                            <rect key="frame" x="25" y="557" width="223" height="21"/>
+                                            <rect key="frame" x="25" y="557" width="364" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="VwC-QC-xFP"/>
-                                                <constraint firstAttribute="width" constant="223" id="gLo-Xi-pV3"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -3348,12 +3348,15 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VR-CX-Hs4">
                                             <rect key="frame" x="25" y="587" width="364" height="128"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="About you" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YyX-7R-SIW">
-                                                    <rect key="frame" x="10" y="5" width="354" height="123"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YyX-7R-SIW" customClass="IQTextView" customModule="IQKeyboardManagerSwift">
+                                                    <rect key="frame" x="10" y="5" width="306" height="123"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="About you"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="0aS-vX-a8s" id="v05-wu-enM"/>
                                                     </connections>
@@ -3364,12 +3367,11 @@
                                                 <constraint firstItem="YyX-7R-SIW" firstAttribute="top" secondItem="9VR-CX-Hs4" secondAttribute="top" constant="5" id="PRt-Xc-Iet"/>
                                                 <constraint firstAttribute="bottom" secondItem="YyX-7R-SIW" secondAttribute="bottom" id="XYX-EG-RRB"/>
                                                 <constraint firstItem="YyX-7R-SIW" firstAttribute="leading" secondItem="9VR-CX-Hs4" secondAttribute="leading" constant="10" id="d1D-fZ-V6o"/>
-                                                <constraint firstAttribute="trailing" secondItem="YyX-7R-SIW" secondAttribute="trailing" id="dT5-pC-RmJ"/>
                                                 <constraint firstAttribute="height" constant="128" id="kKJ-vS-VqK"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-hA-UW6">
-                                            <rect key="frame" x="339" y="600" width="22" height="17"/>
+                                            <rect key="frame" x="357" y="600" width="22" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="DVM-AB-C9Z"/>
                                             </constraints>
@@ -3577,6 +3579,7 @@
                                         <constraint firstItem="0zL-pv-rMQ" firstAttribute="leading" secondItem="maW-aV-Vxw" secondAttribute="leading" id="8ft-Rt-XfE"/>
                                         <constraint firstItem="EZo-HG-Sv1" firstAttribute="leading" secondItem="ocK-xD-EHB" secondAttribute="leading" id="9fb-5Z-jU2"/>
                                         <constraint firstItem="wVn-dV-8hG" firstAttribute="top" secondItem="rzH-M1-7JC" secondAttribute="bottom" constant="9" id="AVe-HZ-t8V"/>
+                                        <constraint firstAttribute="trailing" secondItem="C6t-oK-Z4i" secondAttribute="trailing" constant="25" id="BQ0-lP-Ky7"/>
                                         <constraint firstItem="oWt-Ec-FeD" firstAttribute="centerY" secondItem="lQD-fG-crz" secondAttribute="centerY" id="CN0-59-qV5"/>
                                         <constraint firstItem="jSC-Yh-OqA" firstAttribute="leading" secondItem="oXk-tz-8m8" secondAttribute="leading" id="Ce6-1g-hBD"/>
                                         <constraint firstAttribute="trailing" secondItem="eGl-jR-Lji" secondAttribute="trailing" constant="53" id="EYJ-Rt-Xf7"/>
@@ -3599,6 +3602,7 @@
                                         <constraint firstItem="wVn-dV-8hG" firstAttribute="centerY" secondItem="ocK-xD-EHB" secondAttribute="centerY" id="R6j-Ud-gsj"/>
                                         <constraint firstItem="ONN-qb-HRt" firstAttribute="top" secondItem="VJS-vr-ihu" secondAttribute="bottom" constant="20" id="RPg-gj-Wro"/>
                                         <constraint firstItem="C6t-oK-Z4i" firstAttribute="leading" secondItem="5Xb-YT-tCs" secondAttribute="leading" id="T0c-tx-wBs"/>
+                                        <constraint firstItem="d4X-hA-UW6" firstAttribute="leading" secondItem="YyX-7R-SIW" secondAttribute="trailing" constant="16" id="U1O-H0-Wo4"/>
                                         <constraint firstItem="Q8A-2e-VLM" firstAttribute="top" secondItem="lQD-fG-crz" secondAttribute="bottom" constant="6" id="V4q-oA-fI0"/>
                                         <constraint firstItem="4HL-u8-gqB" firstAttribute="trailing" secondItem="oWt-Ec-FeD" secondAttribute="trailing" id="VEU-VC-HMX"/>
                                         <constraint firstItem="8sc-xX-y5U" firstAttribute="leading" secondItem="oXk-tz-8m8" secondAttribute="leading" constant="41" id="Vul-yn-Gy0"/>
@@ -3632,7 +3636,7 @@
                                         <constraint firstItem="ocK-xD-EHB" firstAttribute="trailing" secondItem="yNn-by-jy2" secondAttribute="trailing" id="ojW-43-rIh"/>
                                         <constraint firstItem="lQD-fG-crz" firstAttribute="leading" secondItem="6MB-g1-u8t" secondAttribute="leading" id="pQl-0z-EWy"/>
                                         <constraint firstItem="maW-aV-Vxw" firstAttribute="top" secondItem="deY-0U-wPR" secondAttribute="bottom" constant="6" id="qu9-IT-fMR"/>
-                                        <constraint firstAttribute="trailing" secondItem="d4X-hA-UW6" secondAttribute="trailing" constant="53" id="sew-ub-klJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="d4X-hA-UW6" secondAttribute="trailing" constant="35" id="sew-ub-klJ"/>
                                         <constraint firstItem="maW-aV-Vxw" firstAttribute="trailing" secondItem="deY-0U-wPR" secondAttribute="trailing" id="skB-aw-Hmm"/>
                                         <constraint firstItem="Q8A-2e-VLM" firstAttribute="leading" secondItem="6MB-g1-u8t" secondAttribute="leading" id="tdj-eE-kWa"/>
                                         <constraint firstItem="nUq-MR-38j" firstAttribute="trailing" secondItem="6at-bV-EdD" secondAttribute="trailing" id="uWg-H1-bcS"/>
@@ -3754,7 +3758,7 @@
                     <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="aboutCountLabel" destination="d4X-hA-UW6" id="L2F-Pj-3iU"/>
-                        <outlet property="aboutTextView" destination="YyX-7R-SIW" id="M69-0s-sfp"/>
+                        <outlet property="aboutTextView" destination="YyX-7R-SIW" id="zoC-9W-IZy"/>
                         <outlet property="aboutView" destination="9VR-CX-Hs4" id="I78-sp-VFR"/>
                         <outlet property="addInfoTableView" destination="FwD-8L-Yro" id="UHs-Zm-zKe"/>
                         <outlet property="addMediaBtn" destination="8sc-xX-y5U" id="UGm-wy-2jd"/>
@@ -3763,6 +3767,7 @@
                         <outlet property="doneToolBarBtn" destination="XG2-i4-qDo" id="185-Nh-3AS"/>
                         <outlet property="mediaCollectionView" destination="CMh-fv-ZIv" id="HC5-aK-JJE"/>
                         <outlet property="motherToungeTextfield" destination="Umd-5W-XN7" id="3yM-z7-QPf"/>
+                        <outlet property="nameLabel" destination="C6t-oK-Z4i" id="72B-Vs-OGP"/>
                         <outlet property="pickerInputView" destination="RP1-Av-eyp" id="IEu-Ti-8dq"/>
                         <outlet property="pickerView" destination="sD2-Tp-cyg" id="FVd-j9-9mJ"/>
                         <outlet property="saveBtn" destination="HWN-JB-gQd" id="IKf-2s-E5t"/>

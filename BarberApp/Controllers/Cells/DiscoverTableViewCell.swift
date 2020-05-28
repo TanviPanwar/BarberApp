@@ -41,7 +41,8 @@ class ServiceCell: UICollectionViewCell {
 
     @IBOutlet weak var serviceNameLbl: UILabel!
     
-
+    @IBOutlet weak var bottomLbl: UILabel!
+    
 }
 
 class TimeSlotCell: UICollectionViewCell {

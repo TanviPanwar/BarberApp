@@ -34,23 +34,23 @@ class TermsOfServicesController: UIViewController {
     {
         if ProjectManager.sharedInstance.isInternetAvailable()
         {
-            if let apiToken = UserDefaults.standard.value(forKey: DefaultsIdentifier.apiToken) as? String {
+            //if let apiToken = UserDefaults.standard.value(forKey: DefaultsIdentifier.apiToken) as? String {
                 
                 // if apiToken != nil {
                 
-                
+           // let apiToken = (UserDefaults.standard.value(forKey: DefaultsIdentifier.apiToken) as? String)!
                 
                 DispatchQueue.main.async {
                     ProjectManager.sharedInstance.showLoader(vc: self)
                 }
                 
-                let headers = [
-                    "Authorization": "Bearer " + apiToken]
-                
+//                let headers = [
+//                    "Authorization": "Bearer " + apiToken]
+//
                 //"Accept": "application/json"
-                print(headers)
+               // print(headers)
                 
-                Alamofire.request(Base_Url+TermsConditionsUrl , method: .post,  parameters: nil, encoding: URLEncoding.default, headers:headers)
+                Alamofire.request(Base_Url+TermsConditionsUrl , method: .post,  parameters: nil, encoding: URLEncoding.default, headers:nil)
                     .responseJSON { response in
                         
                         ProjectManager.sharedInstance.stopLoader()
@@ -118,7 +118,7 @@ class TermsOfServicesController: UIViewController {
                         }
                 }
                 
-            }
+            //}
             
         }
             

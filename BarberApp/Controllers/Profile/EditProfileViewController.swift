@@ -68,8 +68,26 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     @IBAction func backBtnAction(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
+        
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            // handle completion here
+            
+            
+            self.profileObjc.first_name = userName
+            ProjectManager.sharedInstance.NameDelegate?.getUserName()
 
+            
+            
+        })
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        CATransaction.commit()
+        
+        
+        
     }
     
     @IBAction func saveNtnAction(_ sender: Any) {
@@ -111,6 +129,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
             
            ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Date of birth  is required.", vc: self)
             
+            
+        } else if profileObjc.country_id == "0" || profileObjc.country_id.isEmpty {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Nationality is required", vc: self)
             
         } else if emailTextField.text!.count > 25  {
             
@@ -417,6 +439,9 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
                                 
                                 let objc = ProjectManager.sharedInstance.GetLoginDataObjects(dict: data)
                                 self.profileObjc = objc
+                                
+                                UserDefaults.standard.set(objc.first_name, forKey: "user_Name")
+
                                 self.setupUI()
                                 
                                 
@@ -514,11 +539,32 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
                         let msg = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"message", dict: json as NSDictionary)
                         if status.boolValue {
                             
+                            
+                           
+                            
                             if let data = json["data"] as? [String: Any] {
+                        
+                            let objc = ProjectManager.sharedInstance.GetLoginDataObjects(dict: data)
                                 
-//                                let objc = ProjectManager.sharedInstance.GetLoginDataObjects(dict: data)
-//                                
-                                ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: msg as String, vc: self)
+                                UserDefaults.standard.set(objc.first_name, forKey: "user_Name")
+                                userName = objc.first_name
+                                
+                                
+                                CATransaction.begin()
+                                CATransaction.setCompletionBlock({
+                                    // handle completion here
+                                    
+                                    ProjectManager.sharedInstance.NameDelegate?.getUserName()
+                                    ProjectManager.sharedInstance.showAlertwithTitle(title:"", desc: msg as String, vc: self)
+                                    
+                                    
+                                    
+                                })
+                                
+                                self.navigationController?.popViewController(animated: true)
+
+                                CATransaction.commit()
+                                
                                 
                             }
                              

@@ -153,6 +153,12 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+ 
+    
+    
+    
+    
+    
     
      // MARK: - Custom Methods
     
@@ -383,31 +389,104 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
         
         
             
-            let jsonStr = convert()
-            let result = arryObject()
+        if mainArray.contains(where:{$0.price == ""}) || mainArray.contains(where:{$0.price == "0"}) || mainArray.contains(where:{$0.price == "0.00"})  {
             
-            let jsonString = convertToJson(result: result)
+            let index = mainArray.firstIndex(where: { $0.price == "" })
+            if mainArray[index!].switchBool == true {
+                
+                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if  let index = mainArray.firstIndex(where: { $0.price == "0" }) {
+                if mainArray[index].switchBool == true {
+                    
+                    ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                    
+                    
+                }
+            } else if let index = mainArray.firstIndex(where: { $0.price == "0.00" }) {
+                    if mainArray[index].switchBool == true {
+                        
+                        ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                        
+                        
+                    }
+                    
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "" {
+                    
+                     ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                    
+                    
+                } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0" {
+                    
+                     ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                    
+                    
+                } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0.00" {
+                    
+                     ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                    
+                    
+                } else {
+                    
+                    let jsonStr = convert()
+                    let result = arryObject()
+
+                    let jsonString = convertToJson(result: result)
+
+                    saveServiceApi(result: jsonString)
+                    
+                }
+                
+                
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0.00" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else {
+                
+                let jsonStr = convert()
+                let result = arryObject()
+
+                let jsonString = convertToJson(result: result)
+
+                saveServiceApi(result: jsonString)
+                
+            }
+
             
-            saveServiceApi(result: jsonString)
+            
+        
+        
+        
+        
+        
+        
+        
+        
+//            let jsonStr = convert()
+//            let result = arryObject()
+//
+//            let jsonString = convertToJson(result: result)
+//
+//            saveServiceApi(result: jsonString)
 
 
        
         
         
-        //        var vc = ThankYouViewController()
-        //
-        //        if #available(iOS 13.0, *) {
-        //
-        //             vc = homeStoryBoard.instantiateViewController(identifier: "ThankYouViewController") as! ThankYouViewController
-        //
-        //        } else {
-        //            // Fallback on earlier versions
-        //
-        //             vc = homeStoryBoard.instantiateViewController(withIdentifier: "ThankYouViewController") as! ThankYouViewController
-        //
-        //        }
-        //        self.present(vc, animated: true, completion: nil)
-        
+  
         
         
     }
@@ -416,13 +495,151 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func submitApplicationBtnAction(_ sender: Any) {
         
         
+//        if  !mainArray.contains(where:{$0.price >= "0.00"})
+//            //&& mainArray.contains(where:{$0.switchBool == true})
+//        {
+//
+//
+//            ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+//
+//
+//        } else {
+        
+        
+        if mainArray.contains(where:{$0.price == ""}) || mainArray.contains(where:{$0.price == "0"}) || mainArray.contains(where:{$0.price == "0.00"})  {
+            
+            let index = mainArray.firstIndex(where: { $0.price == "" })
+            if mainArray[index!].switchBool == true {
+                
+                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if  let index = mainArray.firstIndex(where: { $0.price == "0" }) {
+                if mainArray[index].switchBool == true {
+                    
+                    ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                    
+                    
+                }
+            } else if let index = mainArray.firstIndex(where: { $0.price == "0.00" }) {
+                    if mainArray[index].switchBool == true {
+                        
+                        ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                        
+                        
+                    }
+                    
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0.00" {
+                
+                 ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+                
+                
+            } else {
+                
+                let jsonStr = convert()
+                let result = arryObject()
+
+                let jsonString = convertToJson(result: result)
+
+                saveServiceApi(result: jsonString)
+                
+            }
+            
+            
+        } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "" {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+            
+            
+        } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0" {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+            
+            
+        } else if homeObjc.home_service_status == "1" && homeObjc.home_service_fee == "0.00" {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+            
+            
+        } else {
             
             let jsonStr = convert()
             let result = arryObject()
-            
+
             let jsonString = convertToJson(result: result)
-            
+
             saveServiceApi(result: jsonString)
+            
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        else if mainArray.contains(where:{$0.price == "0"}) {
+//
+//            let index = mainArray.firstIndex(where: { $0.price == "0" })
+//            if mainArray[index!].switchBool == true {
+//
+//                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+//            } else {
+//
+//
+//            }
+//
+//
+//        } else if mainArray.contains(where:{$0.price == "0.00"}) {
+//
+//            let index = mainArray.firstIndex(where: { $0.price == "0.00" })
+//            if mainArray[index!].switchBool == true {
+//
+//                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert", desc: "Please enter price", vc: self)
+//            } else {
+//
+//
+//            }
+//
+//
+//
+//        }
+        
+        
+        
+        
+//        else {
+//
+//
+//            let jsonStr = convert()
+//            let result = arryObject()
+//
+//            let jsonString = convertToJson(result: result)
+//
+//            saveServiceApi(result: jsonString)
+//
+//        }
+        
+        
+        
+        
+        
+        
+        
+    //}
 
 
        
@@ -525,7 +742,7 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
         cell.serviceDescTextView.tag = indexPath.section
 //        cell.serviceDescTextView.accessibilityLabel = "\(indexPath.section)"
         cell.priceView.setBorder(width: 1, color: #colorLiteral(red: 0.8940390944, green: 0.8941679001, blue: 0.8940109611, alpha: 1))
-        
+    
         
         if indexPath.section == 0 || indexPath.section == self.mainServiceArray.count + 1 || indexPath.section == self.mainArray.count + 2 {
 
@@ -793,36 +1010,48 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                 switchBtn.tag = section
                 
                 priceTextField = UITextField(frame: CGRect(x: 39, y: label.frame.origin.y + label.frame.size.height
-                    + 8, width: UIScreen.main.bounds.width - 162 , height: 24))
+                    + 8, width: 60 , height: 24))
                 priceTextField.font = UIFont(name:"Helvetica Neue Light", size: 23)
                 // label.numberOfLines = 2 UIScreen.main.bounds.width - 162
                 //priceTextField.text = "30.00 QAR"
-                priceTextField.placeholder = "0.00 QAR"
+                priceTextField.placeholder = "0.00"
+                priceTextField.keyboardType = .numberPad
                 priceTextField.tag = section
                 priceTextField.delegate = self
                 
+                let fixedLabel = UILabel(frame: CGRect(x: priceTextField.frame.origin.x + priceTextField.frame.size.width + 2, y: label.frame.origin.y + label.frame.size.height
+                    + 8, width: 50 , height: 24))
+                fixedLabel.font = UIFont(name:"Helvetica Neue Light", size: 23)
+                fixedLabel.textAlignment = .left
+                fixedLabel.text = "QAR"
+                fixedLabel.tag = section
+                
+                
+                
+                
+                
                 if  section >= self.mainServiceArray.count + 2 && section == self.mainArray.count + 3  {
                     
-                    if homeObjc.home_service_fee == "" {
+                    if homeObjc.home_service_fee == "" || homeObjc.home_service_fee == "0.00" || homeObjc.home_service_fee == "0" {
                         
-                        priceTextField.text = "0.00 QAR"
+                        priceTextField.text = ""   //QAR"
     
                     } else {
                     
-                       priceTextField.text = self.homeObjc.home_service_fee + " QAR"
+                       priceTextField.text = self.homeObjc.home_service_fee   //+ " QAR"
                         
                     }
                     
                 } else if section >= self.mainServiceArray.count + 2 {
                     
-                    if mainArray[section - 2].price.isEmpty {
+                    if mainArray[section - 2].price.isEmpty || mainArray[section - 2].price == "0.00" || mainArray[section - 2].price == "0" {
                         
                         priceTextField.text = ""
                         
                         
                     } else {
                         
-                        priceTextField.text = mainArray[section - 2].price + " QAR"
+                        priceTextField.text = mainArray[section - 2].price //+ " QAR"
                     }
                     
                 }  else {
@@ -833,7 +1062,7 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                         
                     } else {
                         
-                        priceTextField.text = mainArray[section - 1].price + " QAR"
+                        priceTextField.text = mainArray[section - 1].price //+ " QAR"
                         
                     }
 
@@ -845,13 +1074,7 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                 
                 
 
-                
-//                let fixedLabel = UILabel(frame: CGRect(x: priceTextField.frame.origin.x + priceTextField.frame.size.width, y: label.frame.origin.y + label.frame.size.height
-//                    + 8, width: 50 , height: 24))
-//                fixedLabel.font = UIFont(name:"Helvetica Neue Light", size: 23)
-//                // label.numberOfLines = 2
-//                fixedLabel.text = "QAR"
-//                fixedLabel.tag = section
+
                 
                 
                 
@@ -885,7 +1108,7 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                 headerView!.addSubview(label)
                 headerView!.addSubview(switchBtn)
                 headerView!.addSubview(priceTextField)
-                //headerView.addSubview(fixedLabel)
+                headerView!.addSubview(fixedLabel)
                 headerView!.addSubview(addBtn)
                 headerView!.addSubview(deleteBtn)
                 headerView!.addSubview(line)
@@ -964,6 +1187,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                             addBtn.isHidden = true
                             deleteBtn.isHidden = true
                             priceTextField.isHidden = true
+                            fixedLabel.isHidden = true
+
                             line.isHidden = true
                             switchBtn.isOn = false
                             
@@ -972,6 +1197,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                             addBtn.isHidden = true
                             deleteBtn.isHidden = true
                             priceTextField.isHidden = false
+                            fixedLabel.isHidden = false
+
                             line.isHidden = false
                             switchBtn.isOn = true
                             
@@ -985,6 +1212,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                             addBtn.isHidden = false
                            // deleteBtn.isHidden = false
                             priceTextField.isHidden = false
+                            fixedLabel.isHidden = false
+
                             line.isHidden = false
                             switchBtn.isOn = true
 
@@ -995,6 +1224,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                                addBtn.isHidden = true
                                deleteBtn.isHidden = true
                                priceTextField.isHidden = true
+                               fixedLabel.isHidden = true
+
                                line.isHidden = true
                                switchBtn.isOn = false
 
@@ -1011,6 +1242,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                             addBtn.isHidden = false
                            // deleteBtn.isHidden = false
                             priceTextField.isHidden = false
+                            fixedLabel.isHidden = false
+
                             line.isHidden = false
                             switchBtn.isOn = true
 
@@ -1021,6 +1254,8 @@ class SelectServicesViewController: UIViewController, UITableViewDataSource, UIT
                             addBtn.isHidden = true
                             deleteBtn.isHidden = true
                             priceTextField.isHidden = true
+                            fixedLabel.isHidden = true
+
                             line.isHidden = true
                             switchBtn.isOn = false
 

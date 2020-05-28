@@ -14,8 +14,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "639"
-            endingLineNumber = "639"
+            startingLineNumber = "647"
+            endingLineNumber = "647"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4161"
-            endingLineNumber = "4161"
+            startingLineNumber = "4258"
+            endingLineNumber = "4258"
             landmarkName = "expandSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4314"
-            endingLineNumber = "4314"
+            startingLineNumber = "4415"
+            endingLineNumber = "4415"
             landmarkName = "collapseSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4331"
-            endingLineNumber = "4331"
+            startingLineNumber = "4432"
+            endingLineNumber = "4432"
             landmarkName = "collapseSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4282"
-            endingLineNumber = "4282"
+            startingLineNumber = "4383"
+            endingLineNumber = "4383"
             landmarkName = "collapseSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4284"
-            endingLineNumber = "4284"
+            startingLineNumber = "4385"
+            endingLineNumber = "4385"
             landmarkName = "collapseSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4276"
-            endingLineNumber = "4276"
+            startingLineNumber = "4377"
+            endingLineNumber = "4377"
             landmarkName = "collapseSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4666"
-            endingLineNumber = "4666"
+            startingLineNumber = "4767"
+            endingLineNumber = "4767"
             landmarkName = "switchBtnAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4675"
-            endingLineNumber = "4675"
+            startingLineNumber = "4776"
+            endingLineNumber = "4776"
             landmarkName = "switchBtnAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4592"
-            endingLineNumber = "4592"
+            startingLineNumber = "4693"
+            endingLineNumber = "4693"
             landmarkName = "switchBtnAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4610"
-            endingLineNumber = "4610"
+            startingLineNumber = "4711"
+            endingLineNumber = "4711"
             landmarkName = "switchBtnAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1822"
-            endingLineNumber = "1822"
+            startingLineNumber = "1839"
+            endingLineNumber = "1839"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1912"
-            endingLineNumber = "1912"
+            startingLineNumber = "1929"
+            endingLineNumber = "1929"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4630"
-            endingLineNumber = "4630"
+            startingLineNumber = "4731"
+            endingLineNumber = "4731"
             landmarkName = "switchBtnAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1368"
-            endingLineNumber = "1368"
+            startingLineNumber = "1491"
+            endingLineNumber = "1491"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "convertToJson(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,8 +302,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "681"
-            endingLineNumber = "681"
+            startingLineNumber = "707"
+            endingLineNumber = "707"
             landmarkName = "longTokenApi(token:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +318,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1007"
-            endingLineNumber = "1007"
+            startingLineNumber = "1088"
+            endingLineNumber = "1088"
             landmarkName = "pickerView(_:viewForRow:forComponent:reusing:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,11 +334,9 @@
             symbolName = "*0x10474d6b5">
             <Locations>
                <Location
-                  uuid = "AD05168E-D124-4A21-974E-1BD166DF43F1 - c32c2ecddf4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  moduleName = "IHLAQ"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
@@ -355,8 +353,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1854"
-            endingLineNumber = "1854"
+            startingLineNumber = "2246"
+            endingLineNumber = "2246"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -460,22 +458,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D1F7C6D5-751C-4D34-96B0-B206BC6C6527"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1172"
-            endingLineNumber = "1172"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "02F8C156-EDFA-4AAF-9B9C-8FF2CC3DF98F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -535,52 +517,36 @@
             endingLineNumber = "210"
             landmarkName = "helpApi()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C766F7A-7153-42C1-9D37-D9294600E5F1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "feedbackApi()"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7C766F7A-7153-42C1-9D37-D9294600E5F1 - 81d8f458ec46525f"
+                  uuid = "967CB793-5D98-4CEC-9FAF-8508CCA6962F - 7e2ef39a6c0ab1c5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
+                  symbolName = "IHLAQ.HelpViewController.helpApi() -&gt; ()"
                   moduleName = "IHLAQ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
+                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Help/HelpViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "3423">
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "975">
                </Location>
                <Location
-                  uuid = "7C766F7A-7153-42C1-9D37-D9294600E5F1 - bca20722c99dd9d4"
+                  uuid = "967CB793-5D98-4CEC-9FAF-8508CCA6962F - 7e2ef39a6c0ab1c5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
+                  symbolName = "IHLAQ.HelpViewController.helpApi() -&gt; ()"
                   moduleName = "IHLAQ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
+                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Help/HelpViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "243">
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "3973">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -597,8 +563,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
             endingLineNumber = "120"
-            landmarkName = "feedbackApi()"
-            landmarkType = "7">
+            landmarkName = "FeedbackViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -613,40 +579,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
-            landmarkName = "feedbackApi()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BCEDBDD3-3F89-4B27-8F0A-5DF5F4F3D8D6 - 81d8f458ec46525f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "975">
-               </Location>
-               <Location
-                  uuid = "BCEDBDD3-3F89-4B27-8F0A-5DF5F4F3D8D6 - 81d8f458ec46525f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "4044">
-               </Location>
-            </Locations>
+            landmarkName = "FeedbackViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -661,40 +595,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "feedbackApi()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F79E1982-0EED-4416-827A-6DFA2F3E9E81 - 81d8f458ec46525f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "975">
-               </Location>
-               <Location
-                  uuid = "F79E1982-0EED-4416-827A-6DFA2F3E9E81 - 81d8f458ec46525f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.FeedbackViewController.feedbackApi() -&gt; ()"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "4044">
-               </Location>
-            </Locations>
+            landmarkName = "FeedbackViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -723,8 +625,8 @@
             filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "ProfileViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -739,8 +641,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1984"
-            endingLineNumber = "1984"
+            startingLineNumber = "2219"
+            endingLineNumber = "2219"
             landmarkName = "saveServiceApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -755,8 +657,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1998"
-            endingLineNumber = "1998"
+            startingLineNumber = "2233"
+            endingLineNumber = "2233"
             landmarkName = "saveServiceApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -771,8 +673,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2004"
-            endingLineNumber = "2004"
+            startingLineNumber = "2239"
+            endingLineNumber = "2239"
             landmarkName = "saveServiceApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -803,8 +705,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1991"
-            endingLineNumber = "1991"
+            startingLineNumber = "2226"
+            endingLineNumber = "2226"
             landmarkName = "saveServiceApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -819,8 +721,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1343"
-            endingLineNumber = "1343"
+            startingLineNumber = "1578"
+            endingLineNumber = "1578"
             landmarkName = "expandSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -835,8 +737,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1326"
-            endingLineNumber = "1326"
+            startingLineNumber = "1561"
+            endingLineNumber = "1561"
             landmarkName = "expandSectionAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -867,8 +769,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3928"
-            endingLineNumber = "3928"
+            startingLineNumber = "4001"
+            endingLineNumber = "4001"
             landmarkName = "tableView(_:viewForHeaderInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -915,8 +817,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3969"
-            endingLineNumber = "3969"
+            startingLineNumber = "4042"
+            endingLineNumber = "4042"
             landmarkName = "tableViewExpandSection(_:imageView:)"
             landmarkType = "7">
             <Locations>
@@ -931,8 +833,8 @@
                   urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3970"
-                  endingLineNumber = "3970"
+                  startingLineNumber = "4043"
+                  endingLineNumber = "4043"
                   offsetFromSymbolStart = "360">
                </Location>
                <Location
@@ -946,8 +848,8 @@
                   urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3971"
-                  endingLineNumber = "3971"
+                  startingLineNumber = "4044"
+                  endingLineNumber = "4044"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
@@ -956,31 +858,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4385FDAB-61AC-4B45-B20D-A9C03BEB3694"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "740"
-            endingLineNumber = "740"
-            landmarkName = "getStatusApi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3D2C717E-C5B5-47A8-9A57-7C1ADC8A9BAB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "498"
+            endingLineNumber = "498"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1102,8 +988,8 @@
             filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "735"
-            endingLineNumber = "735"
+            startingLineNumber = "754"
+            endingLineNumber = "754"
             landmarkName = "getStatusApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1118,8 +1004,8 @@
             filePath = "BarberApp/Controllers/Login/MobileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "MobileViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1134,8 +1020,8 @@
             filePath = "BarberApp/Controllers/Login/MobileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "otpApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1150,8 +1036,8 @@
             filePath = "BarberApp/Controllers/Login/MobileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "otpApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1182,8 +1068,8 @@
             filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2031"
-            endingLineNumber = "2031"
+            startingLineNumber = "2266"
+            endingLineNumber = "2266"
             landmarkName = "saveServiceApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1214,8 +1100,8 @@
             filePath = "BarberApp/Controllers/Profile/CompleteProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "479"
+            endingLineNumber = "479"
             landmarkName = "completeProfileApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1230,8 +1116,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "825"
-            endingLineNumber = "825"
+            startingLineNumber = "903"
+            endingLineNumber = "903"
             landmarkName = "saveAddInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1246,8 +1132,8 @@
             filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "808"
-            endingLineNumber = "808"
+            startingLineNumber = "827"
+            endingLineNumber = "827"
             landmarkName = "changeAvailabilityApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1262,8 +1148,8 @@
             filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "830"
-            endingLineNumber = "830"
+            startingLineNumber = "849"
+            endingLineNumber = "849"
             landmarkName = "changeAvailabilityApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1278,25 +1164,9 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1815"
-            endingLineNumber = "1815"
+            startingLineNumber = "2136"
+            endingLineNumber = "2136"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ACE3994A-13A9-4E09-A0CC-8FA19B950564"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/ProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "746"
-            endingLineNumber = "746"
-            landmarkName = "getStatusApi()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1310,8 +1180,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "746"
-            endingLineNumber = "746"
+            startingLineNumber = "762"
+            endingLineNumber = "762"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1326,8 +1196,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "754"
-            endingLineNumber = "754"
+            startingLineNumber = "770"
+            endingLineNumber = "770"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1374,24 +1244,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2808"
-            endingLineNumber = "2808"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4915258C-76C4-4C46-8E2C-99423809152A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2822"
-            endingLineNumber = "2822"
+            startingLineNumber = "2833"
+            endingLineNumber = "2833"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1406,8 +1260,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "825"
-            endingLineNumber = "825"
+            startingLineNumber = "842"
+            endingLineNumber = "842"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1422,8 +1276,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "542"
-            endingLineNumber = "542"
+            startingLineNumber = "545"
+            endingLineNumber = "545"
             landmarkName = "doneBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1438,8 +1292,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4940"
-            endingLineNumber = "4940"
+            startingLineNumber = "5041"
+            endingLineNumber = "5041"
             landmarkName = "saveScheduleApi(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1454,8 +1308,8 @@
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4857"
-            endingLineNumber = "4857"
+            startingLineNumber = "4958"
+            endingLineNumber = "4958"
             landmarkName = "getScheduleApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1464,47 +1318,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E3F2DDC7-A1E5-4AD0-9547-34E412399F10"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2726"
-            endingLineNumber = "2726"
+            startingLineNumber = "2754"
+            endingLineNumber = "2754"
             landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CCA23A3A-B864-44F1-A43A-23A0A91B6A7C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "feedbackApi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E88CC82-1AFC-41FA-94FD-D4B512531E8A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Feedback/FeedbackViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "feedbackApi()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1518,8 +1340,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1827"
-            endingLineNumber = "1827"
+            startingLineNumber = "2145"
+            endingLineNumber = "2145"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1534,121 +1356,9 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1842"
-            endingLineNumber = "1842"
+            startingLineNumber = "2162"
+            endingLineNumber = "2162"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5A5707C5-41A9-4AA2-AD7F-C3D3A136EF99"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1269"
-            endingLineNumber = "1269"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B5323FCA-ECCC-4F9B-BF0C-2A56F7606978"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1272"
-            endingLineNumber = "1272"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7D165754-B605-4BBD-9194-71A07A47292B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1292"
-            endingLineNumber = "1292"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0F27B6D6-529D-4F48-9B35-1A0B008A4BBB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1295"
-            endingLineNumber = "1295"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0F27B6D6-529D-4F48-9B35-1A0B008A4BBB - 7cf4586ae4cf4bec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHLAQ.AdditionalInfoViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1293"
-                  endingLineNumber = "1293"
-                  offsetFromSymbolStart = "4548">
-               </Location>
-               <Location
-                  uuid = "0F27B6D6-529D-4F48-9B35-1A0B008A4BBB - a92ab3bad9769a8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in IHLAQ.AdditionalInfoViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "IHLAQ"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1295"
-                  endingLineNumber = "1295"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1145F0B9-85E3-40A9-ABA1-B6BBF7523354"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1299"
-            endingLineNumber = "1299"
-            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1662,8 +1372,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
+            startingLineNumber = "534"
+            endingLineNumber = "534"
             landmarkName = "setupScheduleBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1678,8 +1388,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "515"
-            endingLineNumber = "515"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "setupScheduleBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1694,8 +1404,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "522"
-            endingLineNumber = "522"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "setupScheduleBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1710,8 +1420,8 @@
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "527"
-            endingLineNumber = "527"
+            startingLineNumber = "553"
+            endingLineNumber = "553"
             landmarkName = "setupScheduleBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1719,15 +1429,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "18EDF3C0-0155-4CB6-9142-59C3865893B3"
+            uuid = "C9ABE739-D9EA-4E60-81F2-348D7970F146"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/CompleteProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B6DFCC4-FF8B-47F9-9655-8A376BDFF9D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/CompleteProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "continueBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FFCED7F-9500-47B4-8A99-3296F7AF5F20"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "723"
-            endingLineNumber = "723"
+            startingLineNumber = "873"
+            endingLineNumber = "873"
             landmarkName = "saveAddInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1735,15 +1477,229 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4BE23B11-F7BC-4292-ADFA-4D6D7BDC9279"
+            uuid = "EC2B46F6-D9F1-4A0B-9EB4-E4E2A9701048"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2741"
+            endingLineNumber = "2741"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74DA9C1B-E761-4042-BFC5-8A2FFF2DEA43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/ReceiveJobsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2748"
+            endingLineNumber = "2748"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A5205AF-4557-45C3-834F-834EF10D1F9E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "764"
-            endingLineNumber = "764"
+            startingLineNumber = "2120"
+            endingLineNumber = "2120"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B852F41D-977B-45B7-B3DC-2B6E8DAEC9B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2261"
+            endingLineNumber = "2261"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1CB9F90-05DE-42BA-A67F-4AF5D41FF3F3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1456"
+            endingLineNumber = "1456"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96E6989D-F6FB-4904-B672-8C789D743FA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "543"
+            endingLineNumber = "543"
+            landmarkName = "saveProfileApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FB97A3F-22E6-4DF6-AF93-5C2EA193313E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "558"
+            endingLineNumber = "558"
+            landmarkName = "saveProfileApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4802CACD-1434-49A6-A6EC-4C625DEAD011"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "560"
+            endingLineNumber = "560"
+            landmarkName = "saveProfileApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFC4D48C-9445-463A-88B2-FB8199E1F9A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2126"
+            endingLineNumber = "2126"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E50403A1-1CC3-4736-8165-325F4255103A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1774"
+            endingLineNumber = "1774"
+            landmarkName = "addImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF6228DC-3D28-4F33-976B-3F845FD790C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "saveNtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "368197C4-2724-4B5F-9B3A-985D4201811C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "saveNtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "F4852966-F0BF-452E-973C-9C47582A9787"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "8672789D-670E-4C3E-88BB-82B76212264F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC83969C-DF23-4231-8F0D-2CF1B73A568A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "822"
+            endingLineNumber = "822"
             landmarkName = "saveAddInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1751,15 +1707,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ABF757F0-680A-482B-8A41-557FA514A9D9"
+            uuid = "CC2C2140-424F-4009-83F6-3D1344859DAE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "749"
-            endingLineNumber = "749"
+            startingLineNumber = "833"
+            endingLineNumber = "833"
             landmarkName = "saveAddInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1767,15 +1723,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5D0A00E3-4795-4B47-A330-0DA5A469E7B5"
+            uuid = "DEC1C90F-A261-428C-9288-3E82DF8BA789"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "767"
-            endingLineNumber = "767"
+            startingLineNumber = "812"
+            endingLineNumber = "812"
             landmarkName = "saveAddInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1783,16 +1739,352 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAEB6B21-1972-45A7-9346-0EDFE5EF67EA"
+            uuid = "F83E0B11-497E-4E7D-B080-8C90473CD1A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "514"
+            endingLineNumber = "514"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8474C0D8-C17B-475C-BC3E-7EFDE0509946"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "599"
+            endingLineNumber = "599"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAA4A3F9-C05F-4D4D-A55F-EFA11DD4D14F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "611"
+            endingLineNumber = "611"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23524926-6BFF-4DA5-9C77-E57D1255901A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "630"
+            endingLineNumber = "630"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C1770B1-316F-4396-AAA2-270AEDC61295"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "512"
+            endingLineNumber = "512"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8AC5C2C-47CC-46B7-953A-0D47D8D9C492"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "559"
+            endingLineNumber = "559"
+            landmarkName = "submitApplicationBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18B4F682-A19E-42EC-870B-11D0126A96B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
+            landmarkName = "saveBtnAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18B4F682-A19E-42EC-870B-11D0126A96B4 - d148f81a7fd35379"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IHLAQ.SelectServicesViewController.saveBtnAction(Any) -&gt; ()"
+                  moduleName = "IHLAQ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "415"
+                  endingLineNumber = "415"
+                  offsetFromSymbolStart = "3312">
+               </Location>
+               <Location
+                  uuid = "18B4F682-A19E-42EC-870B-11D0126A96B4 - d148f81a7fd35379"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IHLAQ.SelectServicesViewController.saveBtnAction(Any) -&gt; ()"
+                  moduleName = "IHLAQ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios6/Documents/GitProjects/BarberApp-Latest-iOS/BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "415"
+                  endingLineNumber = "415"
+                  offsetFromSymbolStart = "3331">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DA26561-46B6-4B22-B05B-945E1438F6CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/SelectServicesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
+            landmarkName = "saveBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A720251E-3F56-48F0-A578-69BF52492239"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "919"
-            endingLineNumber = "919"
-            landmarkName = "getAddInfoApi()"
+            startingLineNumber = "1262"
+            endingLineNumber = "1262"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80A83920-A849-45CF-B3FC-D7913281E64D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2044"
+            endingLineNumber = "2044"
+            landmarkName = "assetsPicker(controller:selected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35F77072-875F-4E79-B75E-882453AA988A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2008"
+            endingLineNumber = "2008"
+            landmarkName = "assetsPicker(controller:selected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A12EFB0-A856-4557-864E-43C3A64238BA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "777"
+            endingLineNumber = "777"
+            landmarkName = "saveAddInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "286308C2-882A-4508-80D5-225BC21A20C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2038"
+            endingLineNumber = "2038"
+            landmarkName = "assetsPicker(controller:selected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE677D84-BFAD-44FB-8D6D-D17587BF2B92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2011"
+            endingLineNumber = "2011"
+            landmarkName = "assetsPicker(controller:selected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B210F21A-743C-4A0D-8540-886948471638"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Profile/AdditionalInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2036"
+            endingLineNumber = "2036"
+            landmarkName = "assetsPicker(controller:selected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27C3CC9F-89C3-4DDE-816C-9371D2C7EEB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Login/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "swiped(gesture:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFC1489F-70C3-447E-A490-A8F0A438C890"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Login/MobileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DCD31DF-DE0E-4887-BAF7-FDF1CA16F32F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Login/MobileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9463AE87-74A9-4FE0-9189-EC886199E9A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/Login/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "onBoardingDataApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61A63179-788F-47DF-82E3-F6FA513DDD10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarberApp/Controllers/TermsOfService/TermsOfServicesController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

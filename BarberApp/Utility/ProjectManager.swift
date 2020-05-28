@@ -14,6 +14,7 @@ import NVActivityIndicatorView
 let homeStoryBoard = UIStoryboard(name:"Home", bundle: nil)
 let mainStoryBoard = UIStoryboard(name:"Main", bundle: nil)
 var instagramCode = String()
+var userName = String()
 
 protocol getTokenDelegate {
     func getAccessToken(code: String)
@@ -22,6 +23,11 @@ protocol getTokenDelegate {
 protocol getStatusDelegate {
     
     func getServiceProviderStatus()
+}
+
+protocol getUserNameDelegate {
+    
+    func getUserName()
 }
 
 class ProjectManager: NSObject {
@@ -34,6 +40,8 @@ class ProjectManager: NSObject {
     
     var tokenDelegate: getTokenDelegate?
     var statusDelegate: getStatusDelegate?
+    var NameDelegate: getUserNameDelegate?
+
 
 
     
@@ -480,6 +488,15 @@ class ProjectManager: NSObject {
             obj.image = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "image", dict: dict as NSDictionary) as String
             
             obj.price = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "price", dict: dict as NSDictionary) as String
+            if obj.price == "" ||  obj.price == "0"  || obj.price == "0.00" {
+                
+                obj.price = ""
+                
+            } else {
+                
+                
+            }
+            
             
             obj.service_category = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "service_category", dict: dict as NSDictionary) as String
             
@@ -516,6 +533,15 @@ class ProjectManager: NSObject {
         var obj = ServiceObject()
         
         obj.home_service_fee = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "home_service_fee", dict: dict as NSDictionary) as String
+        
+        if obj.home_service_fee == "" || obj.home_service_fee == "0" || obj.home_service_fee == "0.00" {
+            
+            obj.home_service_fee = ""
+            
+        } else {
+            
+            
+        }
         
         obj.home_service_status = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "home_service_status", dict: dict as NSDictionary) as String
         
@@ -702,6 +728,10 @@ class ProjectManager: NSObject {
         if obj.passport != "" {
             
             obj.passID = "2"
+        } else {
+            
+            obj.passID = ""
+
         }
 
         
@@ -712,6 +742,10 @@ class ProjectManager: NSObject {
         if obj.qtr_back_id != "" {
             
             obj.backID = "1"
+        } else {
+            
+            obj.backID = ""
+
         }
          
           obj.qtr_front_id = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "qtr_front_id", dict: dict as NSDictionary) as String
@@ -719,7 +753,11 @@ class ProjectManager: NSObject {
         if obj.qtr_front_id != "" {
                   
                   obj.frontID = "0"
-              }
+              }  else {
+                         
+                         obj.frontID = ""
+
+                     }
         
         obj.second_language = ProjectManager.sharedInstance.checkResponseForString(jsonKey: "second_language", dict: dict as NSDictionary) as String
         

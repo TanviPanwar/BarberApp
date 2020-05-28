@@ -10,19 +10,34 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import GoogleMaps
+import CoreLocation
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, GMSMapViewDelegate {
 
     var window: UIWindow?
+    var locationManager = CLLocationManager()
+    var mapViw: GMSMapView!
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         sleep(2)
         IQKeyboardManager.shared.enable = true
-         GMSServices.provideAPIKey("AIzaSyCezEmxGKtPLCTpb_jEife31PnfJuICegc")
+        GMSServices.provideAPIKey("AIzaSyCezEmxGKtPLCTpb_jEife31PnfJuICegc")
         // Override point for customization after application launch.
         
+        self.locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+
+        self.mapViw?.isMyLocationEnabled = true
+        mapViw?.delegate = self
+
+
+        //.locationManager.startUpdatingLocation()
+
         
         if #available(iOS 13.0, *) {
             

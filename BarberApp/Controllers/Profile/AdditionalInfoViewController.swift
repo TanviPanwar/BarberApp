@@ -70,6 +70,8 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     var urlsAarray = [URL]()
     var myPickerController = UIImagePickerController()
     var imageArray = [UIImage]()
+    var totlaImageArray = [UIImage]()
+
     var imageData = [Data]()
 
     var addBool = Bool()
@@ -98,6 +100,8 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     var uniqueImageArray = [UIImage]()
     var profileBool = Bool()
     var nameStr = String()
+    var maxUploadSize = String()
+    var maxSize = Float()
     
    
 
@@ -124,6 +128,14 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
 
         }
         ProjectManager.sharedInstance.tokenDelegate = self
+        
+        if UserDefaults.standard.value(forKey: "user_Name") != nil {
+            
+            
+            let str =  UserDefaults.standard.value(forKey: "user_Name") as? String
+            nameLabel.text =  "About " + str!
+            
+        }
         
         showPicker()
         loadJson(filename: "languages")
@@ -191,14 +203,25 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
         let count = 500 - length
 
         // set the .text property of your UILabel to the live created String
+        
         aboutCountLabel.text =  String(count)
 
         // if you want to limit to 55 charakters
         // you need to return true and <= 55
 
-        return length <= 499
+         return length <= 499
         
         
+//        let str = (textView.text + text)
+//               if str.count <= 499 {
+//                aboutCountLabel.text =  String(str.count)
+//
+//
+//                   return true
+//               }
+//               return false
+//
+//
         
    
      }
@@ -210,7 +233,8 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     func setupUI() {
         
         
-        nameLabel.text = "About " + nameStr
+       // nameLabel.text = "About " + userName
+        
         addMediaBtn.roundCorners(corners: [.allCorners], radius: addMediaBtn.frame.size.height/2)
         aboutView.setBorder(width: 1, color: #colorLiteral(red: 0.8117647059, green: 0.800083518, blue: 0.7998213172, alpha: 1))
         
@@ -237,14 +261,14 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
         if LanguageArray.contains(where: {$0.code == addinfoProfileObjc.second_language}) {
             // it exists, do something
             
-            let index1 = LanguageArray.firstIndex(where: { $0.code == addinfoProfileObjc.user_language })
+            let index1 = LanguageArray.firstIndex(where: { $0.code == addinfoProfileObjc.second_language })
             secondLanguageTextField.text = LanguageArray[index1!].countryName
             
         }
         if LanguageArray.contains(where: {$0.code == addinfoProfileObjc.third_language}) {
             // it exists, do something
             
-            let index2 = LanguageArray.firstIndex(where: { $0.code == addinfoProfileObjc.user_language })
+            let index2 = LanguageArray.firstIndex(where: { $0.code == addinfoProfileObjc.third_language })
             thirdLanguageTextField.text = LanguageArray[index2!].countryName
             
         }
@@ -320,7 +344,9 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
                       let myPickerController = UIImagePickerController()
                       myPickerController.delegate = self
-                      myPickerController.sourceType = .photoLibrary
+                     // myPickerController.sourceType = .photoLibrary
+                      myPickerController.sourceType = .savedPhotosAlbum
+
                       self.present(myPickerController, animated: true, completion: nil)
                   }
             addBool = false
@@ -422,15 +448,15 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
     
     @IBAction func addMediaBtnAction(_ sender: Any) {
         
-        if imageArray.count == 9 {
-            
-            imageArray.removeAll()
-            mediaCollectionView.reloadData()
-            
-        } else {
-            
-            
-        }
+//        if imageArray.count == 9 {
+//
+//            imageArray.removeAll()
+//            mediaCollectionView.reloadData()
+//
+//        } else {
+//
+//
+//        }
         
         
         let alertController = UIAlertController(title:"", message:"", preferredStyle: .actionSheet)
@@ -713,18 +739,46 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                 let headers = [
                     "Authorization": "Bearer " + apiToken, "Accept": "application/json"]
                 
-                let additionalPathArray = (self.addinfoProfileObjc.additional_info.map{String($0)}).joined(separator: ",")
+                var additionalPathArr = [String]()
+                
+                if self.addinfoProfileObjc.additional_info.count > 0 {
+                for i in self.addinfoProfileObjc.additional_info {
+                    
+                    let parsed = i.replacingOccurrences(of: "http://13.126.46.105", with: "")
+                    
+                    additionalPathArr.append(parsed)
+                    
+
+                }
+                    
+            }
+                
+                let additionalPathArray = (additionalPathArr.map{String($0)}).joined(separator: ",")
                 
                 var params = [String: Any]()
                     
-                params = ["about":about, "user_language":addinfoProfileObjc.user_language, "second_language":addinfoProfileObjc.second_language, "third_language":addinfoProfileObjc.third_language, "service_type":"Salon", "instagram_token:":instagramToken, "additional_data_path":additionalPathArray] as[String: Any]
+                var serviceType = String()
+                
+                if freelanceBool {
+                    
+                    serviceType = "Freelancer"
+                    
+                } else {
+                    
+                    serviceType = "Salon"
+
+                }
+                
+                
+                
+                params = ["about":about, "user_language":addinfoProfileObjc.user_language, "second_language":addinfoProfileObjc.second_language, "third_language":addinfoProfileObjc.third_language, "service_type":serviceType, "instagram_token:":instagramToken, "additional_data_path":additionalPathArray] as[String: Any]
                 
                 let imageParamName = "additional_info"
                 print(params)
                 
                 
-                if imageArray.count > 0 {
-                    for image in imageArray {
+                if totlaImageArray.count > 0 {
+                    for image in totlaImageArray {
                         
                         let imageD = image.jpegData(compressionQuality: 0.1)
                         imageData.append(imageD!)
@@ -736,7 +790,7 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                 Alamofire.upload(multipartFormData: { multipartFormData in
                     // import image to request
                     
-                    if self.imageArray.count > 0 {
+                    if self.totlaImageArray.count > 0 {
                         for i in 0...self.imageData.count - 1 {
                         
                         let imageData = self.imageData[i]
@@ -746,7 +800,7 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                     } else {
                         
                         let imageData = Data()
-                        multipartFormData.append(imageData, withName:  "\(imageParamName)[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
+                        multipartFormData.append(imageData, withName:  "\(imageParamName)[]", fileName: "", mimeType: "" )
                         
                         
 //                        params = ["about":about, "user_language":self.addinfoProfileObjc.user_language, "second_language":self.addinfoProfileObjc.second_language, "third_language":self.addinfoProfileObjc.third_language, "service_type":"Saloon", "instagram_token:":self.instagramToken,"additional_info[]": self.imageArray, "additional_data_path":additionalPathArray]
@@ -755,13 +809,37 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                         
                     }
                     
+                    if self.frontIDData.isEmpty {
+                        
+                        multipartFormData.append(self.frontIDData, withName: "qtr_front_id", fileName: "", mimeType: "" )
+                        
+                    } else {
+                        
+                        multipartFormData.append(self.frontIDData, withName: "qtr_front_id", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
+                        
+                    }
                     
                     
-                    multipartFormData.append(self.frontIDData, withName: "qtr_front_id", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
-
-                      multipartFormData.append(self.backIDData, withName: "qtr_back_id", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
-
-                      multipartFormData.append(self.passportData, withName: "passport", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
+                    if self.backIDData.isEmpty {
+                        
+                        multipartFormData.append(self.backIDData, withName: "qtr_back_id", fileName: "", mimeType: "" )
+                        
+                    } else {
+                        
+                        multipartFormData.append(self.backIDData, withName: "qtr_back_id", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
+                        
+                    }
+                    
+                    if self.passportData.isEmpty {
+                        
+                        multipartFormData.append(self.passportData, withName: "passport", fileName: "", mimeType: "" )
+                        
+                    } else {
+                        
+                        
+                        multipartFormData.append(self.passportData, withName: "passport", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg" )
+                        
+                    }
 
                     
                     for (key, value) in params {
@@ -919,6 +997,9 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                         print(json)
                         let status = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"status", dict: json as NSDictionary)
                         let msg = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"message", dict: json as NSDictionary)
+                        self.maxUploadSize = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"max_upload_filesize", dict: json as NSDictionary) as String
+                        
+                        
                         if status.boolValue {
                             
                             if let data = json["data"] as? [String: Any] {
@@ -927,23 +1008,23 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                                 self.addinfoProfileObjc = objc
                                 
                                 
-//                                if self.addinfoProfileObjc.additional_info.count > 0 {
-//                                for imageStr in self.addinfoProfileObjc.additional_info {
-//
-//                                    if let url = URL(string: imageStr) {
-//                                        if let data = try? Data(contentsOf: url)
-//                                    {
-//                                        let image  = UIImage(data: data)!
-//                                        self.imageArray.append(image)
-//
-//                                    }
-//
-//                                    }
-//
-//
-//                                }
-//
-//                            }
+                                if self.addinfoProfileObjc.additional_info.count > 0 {
+                                for imageStr in self.addinfoProfileObjc.additional_info {
+
+                                    if let url = URL(string: imageStr) {
+                                        if let data = try? Data(contentsOf: url)
+                                    {
+                                        let image  = UIImage(data: data)!
+                                        self.imageArray.append(image)
+
+                                    }
+
+                                    }
+
+
+                                }
+
+                            }
                                 
                                 
                                 self.setupUI()
@@ -1064,11 +1145,22 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
 
 
                 } else {
+                    
+                    
+                    
 
                    // if cell.imageView.image == nil {
                         
                         cell.imageView.image = imageArray[indexPath.row]
                         cell.addBtn.setImage(#imageLiteral(resourceName: "Cross-1"), for: .normal)
+                    
+//                        if self.addinfoProfileObjc.additional_info.count > 0 {
+//                        if !self.addinfoProfileObjc.additional_info[indexPath.row].isEmpty {
+//
+//                            self.addinfoProfileObjc.additional_info.remove(at: indexPath.row)
+//                        }
+//                            
+//                    }
 
 //
 //                    } else {
@@ -1081,6 +1173,8 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
 //                    cell.imageView.image = imageArray[indexPath.row]
 //                    cell.addBtn.setImage(#imageLiteral(resourceName: "Cross-1"), for: .normal)
 
+                        
+                   
 
                 }
                     
@@ -1106,11 +1200,15 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
 //                // cell.imageView.image = #imageLiteral(resourceName: "barberSample")
 //
 //            } else {
+//
+//                for i in self.addinfoProfileObjc.additional_info {
 //                cell.imageView!.sd_setImage(with: URL(string :self.addinfoProfileObjc.additional_info[indexPath.row] )) { (image, error, cache, url) in
 //
 //                }
 //                cell.addBtn.setImage(#imageLiteral(resourceName: "Cross-1"), for: .normal)
 //
+//
+//                }
 //
 //            }
 //        }
@@ -1147,7 +1245,23 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                 if let index = self.imageArray.firstIndex(where: {$0 == cell.imageView.image}) {
                     
                     self.imageArray.remove(at: index)
+                    
+                    if self.addinfoProfileObjc.additional_info.count > 0 {
+                        
+                        if self.addinfoProfileObjc.additional_info.indices.contains(index) {
+                        self.addinfoProfileObjc.additional_info.remove(at: index)
+
+                    }
+                    
                 }
+                    
+            }
+                
+                if let index = self.totlaImageArray.firstIndex(where: {$0 == cell.imageView.image}) {
+                    
+                    self.totlaImageArray.remove(at: index)
+                }
+                
            
             // self.imageArray.remove(at: indexPath.row)
             if self.selectedIndexArray.contains(indexPath.row) {
@@ -1169,13 +1283,17 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                     
                 }
                 
-                if self.addinfoProfileObjc.additional_info.count > 0 {
-                if !self.addinfoProfileObjc.additional_info[indexPath.row].isEmpty {
-                    
-                    self.addinfoProfileObjc.additional_info.remove(at: indexPath.row)
-                }
-                    
-            }
+                
+                
+//                if self.addinfoProfileObjc.additional_info.count > 0 {
+//                if !self.addinfoProfileObjc.additional_info[indexPath.row].isEmpty {
+//
+//                    self.addinfoProfileObjc.additional_info.remove(at: indexPath.row)
+//                }
+//
+//            }
+                
+                
             
             }
         }
@@ -1338,15 +1456,20 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
                     if indexPath.section == 0 {
                         
                         self.addinfoProfileObjc.frontID = ""
+                        self.frontImage = UIImage()
                         
                     } else if indexPath.section == 1 {
                         
                         self.addinfoProfileObjc.backID = ""
+                        self.backImage = UIImage()
+
                         
                         
                     } else if indexPath.section == 2 {
                         
                         self.addinfoProfileObjc.passID = ""
+                        self.passImage = UIImage()
+
                         
                     }
                     
@@ -1577,6 +1700,60 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
             singlePicker()
 
     
+//          if let sectionHeader = headerView {
+//
+//            let headerHeight:CGFloat
+//
+//
+//            headerHeight = 30.0
+//
+//
+//            UIView.animate(withDuration: 0.3, animations: {
+//                self.addInfoTableView?.beginUpdates()
+//                sectionHeader.frame.size.height = headerHeight
+//                self.addInfoTableView?.endUpdates()
+//            } )
+//
+//
+//            if sender.tag == 0 {
+//
+//                addinfoProfileObjc.frontID = "0"
+//                addinfoProfileObjc.qtr_front_id = ""
+//
+//
+//            } else if sender.tag == 1 {
+//
+//                addinfoProfileObjc.backID = "1"
+//                addinfoProfileObjc.qtr_back_id = ""
+//
+//
+//
+//            }else if sender.tag == 2 {
+//
+//                addinfoProfileObjc.passID = "2"
+//                addinfoProfileObjc.passport = ""
+//
+//
+//            }
+//
+//
+//        }
+            
+
+            
+        }
+        
+        
+        
+       // addInfoTableView.reloadData()
+        
+        
+        
+    }
+    
+    
+    func addImage() {
+        
           if let sectionHeader = headerView {
             
             let headerHeight:CGFloat
@@ -1592,20 +1769,20 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
             } )
             
             
-            if sender.tag == 0 {
+            if uploadTag == 0 {
                 
                 addinfoProfileObjc.frontID = "0"
                 addinfoProfileObjc.qtr_front_id = ""
 
                 
-            } else if sender.tag == 1 {
+            } else if uploadTag == 1 {
                 
                 addinfoProfileObjc.backID = "1"
                 addinfoProfileObjc.qtr_back_id = ""
 
                 
                 
-            }else if sender.tag == 2 {
+            }else if uploadTag == 2 {
                 
                 addinfoProfileObjc.passID = "2"
                 addinfoProfileObjc.passport = ""
@@ -1615,15 +1792,9 @@ class AdditionalInfoViewController: UIViewController, UICollectionViewDataSource
             
             
         }
-            
-
-            
-        }
-        
-        
         
         addInfoTableView.reloadData()
-        
+
         
         
     }
@@ -1731,27 +1902,85 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
             let assets = self.assets
             self.urlsAarray.removeAll()
             self.assets.removeAll()
+            var getSizeChk = Bool()
+
+            
+        
 
             for i in assets {
                 
-                
+                if i.mediaType == .image {
                 let resources = PHAssetResource.assetResources(for: i) // your PHAsset
 
                
                 
-                self.assets.append(i)
-                let image =    self.getAssetThumbnail(asset: i)
-                self.imageArray.append(image)
-                //self.uniqueImageArray.append(image)
+//                self.assets.append(i)
+//                let image =    self.getAssetThumbnail(asset: i)
+//                self.imageArray.append(image)
+//                self.totlaImageArray.append(image)
+                    
+                    
 
-               // self.selectedIndexArray.append(self.selectedIndexArray.last! + 1)
-                
-//                let indexpath = NSIndexPath(row: Mediaindex, section: 0)
-//                let cell = self.mediaCollectionView.cellForItem(at: indexpath as IndexPath) as! AdditionalInfoCollectionViewCell
-//
-//                cell.imageView.image = image
-//                Mediaindex = Mediaindex + 1
+                    var sizeOnDisk: Int64? = 0
+
+                    if let resource = resources.first {
+                        let unsignedInt64 = resource.value(forKey: "fileSize") as? CLong
+                        sizeOnDisk = Int64(bitPattern: UInt64(unsignedInt64!))
+                        print(sizeOnDisk!)
+                        let sizeInMb:Float = (Float(sizeOnDisk!)/Float(1024))/Float(1024)
+                        if maxUploadSize.isEmpty {
+                            
+                            maxSize = 5
+                            
+                        } else {
+                            
+                        let sizeStr = maxUploadSize.dropLast(2)
+                        maxSize = Float(String(sizeStr))!
+                            
+                        }
+                        
+                        if sizeInMb < 5 || sizeInMb == 5 {
+                            self.assets.append(i)
+                            let image =  self.getAssetThumbnail(asset: i)
+                            self.imageArray.append(image)
+                            self.totlaImageArray.append(image)
+                            
+                            
+                            
+                            
+                        }
+                        else {
+                            getSizeChk = true
+                        }
+                        print(sizeInMb)
+                    }
+                    
+                    
+                    
+
+
+                    
+                } else {
+                    
+                  
+                }
               
+            }
+            
+            if getSizeChk {
+                
+                if maxUploadSize.isEmpty {
+                    
+                    maxUploadSize = "5 MB"
+                }
+
+                let alertController = UIAlertController(title:"Message", message:"Some of the files size is greater than \(maxUploadSize)", preferredStyle: .alert)
+                let okAction =  UIAlertAction(title:"OK", style:.default) { (action) in
+
+                }
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+
             }
             
            self.mediaCollectionView.reloadData()
@@ -1770,6 +1999,87 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
         self.index = 0
         self.assets = assets
         print(assets.count)
+        
+        
+        if addinfoProfileObjc.additional_info.count > 0 {
+            let totalCount =  9 - self.addinfoProfileObjc.additional_info.count
+            
+            
+            if assets.count > totalCount {
+                
+                
+                let proCount  = assets.count - totalCount
+                //for i in 0...proCount - 1 {
+                    
+                    if self.addinfoProfileObjc.additional_info.count > 0 {
+                        
+                        
+                        self.imageArray.removeSubrange(0...proCount - 1)
+                        self.addinfoProfileObjc.additional_info.removeSubrange(0...proCount - 1)
+//                        self.addinfoProfileObjc.additional_info.remove(at: i)
+//                        self.imageArray.remove(at: i)
+                        
+                    }
+                    
+                    
+               // }
+                
+                print(self.imageArray)
+                print(self.addinfoProfileObjc.additional_info)
+
+                
+            }
+            
+        }
+        
+        
+        if addinfoProfileObjc.additional_info.count == 0 {
+        
+        if imageArray.count > 0 {
+           
+            let remCount = 9 - imageArray.count
+            
+            if   assets.count >   remCount {
+                
+                let procount = assets.count - remCount
+                //for i in 0...procount - 1 {
+                    
+                    if self.imageArray.count > 0 {
+                        
+                        self.imageArray.removeSubrange(0...procount - 1)
+                        self.totlaImageArray.removeSubrange(0...procount - 1)
+
+//                        self.imageArray.remove(at: i)
+//                        self.totlaImageArray.remove(at: i)
+                        
+                        
+                        
+                    }
+                    
+                    
+               // }
+                
+            }
+            
+        }
+        
+    }
+        
+        
+        
+//        for i in assets {
+//
+//            self.assets.append(i)
+//            let image =    self.getAssetThumbnail(asset: i)
+//            self.totlaImageArray.append(image)
+//
+//
+//        }
+        
+        
+        print(self.addinfoProfileObjc.additional_info)
+        print(self.imageArray)
+
         
     }
     
@@ -1813,11 +2123,19 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
                 self?.addinfoProfileObjc.qtr_front_id = ""    //"0"
                 self?.frontImage = image
                 
-                self?.addInfoTableView.reloadData()
-//                let index = NSIndexPath(row:0, section: 0)
-//                let cell = self!.addInfoTableView.cellForRow(at: index as IndexPath) as! AdditionalInfoTableViewCell
-//
-//                cell.cellImageView.image = image
+                self?.addImage()
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                //self?.addInfoTableView.reloadData()
+
                 
                 
             } else if self?.uploadTag == 1 {
@@ -1826,7 +2144,9 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
                 self?.addinfoProfileObjc.qtr_back_id = "" // "1"
                 self?.backImage = image
                 
-                self?.addInfoTableView.reloadData()
+                self?.addImage()
+
+                //self?.addInfoTableView.reloadData()
 
 
                 
@@ -1841,7 +2161,10 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
                 self?.addinfoProfileObjc.passport = ""    //"2"
                 self?.passImage = image
                 
-                self?.addInfoTableView.reloadData()
+                self?.addImage()
+
+                
+               // self?.addInfoTableView.reloadData()
 
 
                 
@@ -1852,22 +2175,99 @@ extension AdditionalInfoViewController: AssetsPickerViewControllerDelegate {
                 
             } else {
                 
-                self?.imageArray.append(image)
-            if (self?.selectedIndexArray.contains(self!.selectedIndex))! {
+//
                 
                 
-            } else {
-            
-            self?.selectedIndexArray.append(self!.selectedIndex)
+                var sizeCheck = Bool()
+                let imageData = image.jpegData(compressionQuality: 0.1)
+                let length = imageData?.count
+                let sizeInMb:Float = (Float(length!)/Float(1024))/Float(1024)
                 
-            }
-            
-            let index = NSIndexPath(row: self!.selectedIndex, section: 0)
-            let cell = self!.mediaCollectionView.cellForItem(at: index as IndexPath) as! AdditionalInfoCollectionViewCell
+                if self!.maxUploadSize.isEmpty {
+                    
+                    self!.maxSize = 5
+                    
+                } else {
+                    
+                    let sizeStr = self!.maxUploadSize.dropLast(2)
+                    self!.maxSize = Float(String(sizeStr))!
+                    
+                }
+                
+                if sizeInMb < self!.maxSize || sizeInMb == self!.maxSize {
+                    
+                    self?.imageArray.append(image)
+                    self?.totlaImageArray.append(image)
+                    
+                    if (self?.selectedIndexArray.contains(self!.selectedIndex))! {
+                        
+                        
+                    } else {
+                        
+                        self?.selectedIndexArray.append(self!.selectedIndex)
+                        
+                    }
+                    
+                    let index = NSIndexPath(row: self!.selectedIndex, section: 0)
+                    let cell = self!.mediaCollectionView.cellForItem(at: index as IndexPath) as! AdditionalInfoCollectionViewCell
+                    
+                    cell.imageView.image = image
+                    
+                    
+                    
+                }  else {
+                    
+                    sizeCheck = true
+                }
+                
+                if sizeCheck {
 
-            cell.imageView.image = image
+                    if self!.maxUploadSize.isEmpty {
+                        
+                        self!.maxUploadSize = "5 MB"
+                    }
+                    
+                    let alertController = UIAlertController(title:"Message", message:"Some of the files size is greater than \(self!.maxUploadSize)", preferredStyle: .alert)
+                    let okAction =  UIAlertAction(title:"OK", style:.default) { (action) in
+
+                    }
+                    alertController.addAction(okAction)
+                    self!.present(alertController, animated: true, completion: nil)
+
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+//
+//                self?.imageArray.append(image)
+//                self?.totlaImageArray.append(image)
+//
+//                if (self?.selectedIndexArray.contains(self!.selectedIndex))! {
+//
+//
+//                } else {
+//
+//                    self?.selectedIndexArray.append(self!.selectedIndex)
+//
+//                }
+//
+//                let index = NSIndexPath(row: self!.selectedIndex, section: 0)
+//                let cell = self!.mediaCollectionView.cellForItem(at: index as IndexPath) as! AdditionalInfoCollectionViewCell
+//
+//            cell.imageView.image = image
+                
+                
+                
+                
                 
             }
+            
+            
             
             //self?.mediaCollectionView.reloadData()
         }

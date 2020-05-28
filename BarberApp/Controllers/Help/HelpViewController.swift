@@ -167,7 +167,21 @@ class HelpViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func submitBtnAction(_ sender: Any) {
         
-        helpApi()
+        
+        if contactReason.isEmpty {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title:"Alert", desc: "Select any one", vc: self)
+            
+            
+        } else if helpTextView.text.isEmpty {
+            
+             ProjectManager.sharedInstance.showAlertwithTitle(title:"Alert", desc: "Please enter description of your help", vc: self)
+            
+        } else {
+        
+           helpApi()
+            
+        }
         
     }
     

@@ -25,8 +25,19 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TxtViw.isHidden = true
-        tellUsMoreLbl.isHidden = true
+       
+        giveProductLbl.font = UIFont(name:"HelveticaNeue-Medium", size: 17)
+        reportBugLbl.font = UIFont(name:"HelveticaNeue", size: 17)
+        giveProductLbl.textColor = #colorLiteral(red: 0.1309883595, green: 0.2987812161, blue: 0.5047755837, alpha: 1)
+        feedbackImgViw.image = #imageLiteral(resourceName: "feedback-blue")
+        reportBugLbl.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        smileImgViw.image = #imageLiteral(resourceName: "smile-black")
+        TxtViw.isHidden = false
+        tellUsMoreLbl.isHidden = false
+        submitBtn.isHidden = false
+        reportType = "1"
+        reportText = "Give product feedback"
+
         // Do any additional setup after loading the view.
     }
     

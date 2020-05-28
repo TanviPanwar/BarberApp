@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var descrptionLabel: UILabel!
     @IBOutlet weak var getStartedBtn: RoundedButton!
     @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var privacyBtn: UIButton!
+    @IBOutlet weak var servicesBtn: UIButton!
     
     var imageIndex: NSInteger = 0
     var maxImages = 0
@@ -69,6 +71,46 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func privacyBtnAction(_ sender: Any) {
+    
+        
+        var vc = TermsOfServicesController()
+        
+        if #available(iOS 13.0, *) {
+            
+           vc = homeStoryBoard.instantiateViewController(identifier:"TermsOfServicesController" ) as! TermsOfServicesController
+            
+        } else {
+            // Fallback on earlier versions
+            
+            vc = homeStoryBoard.instantiateViewController(withIdentifier:"TermsOfServicesController" ) as! TermsOfServicesController
+            
+        }
+           self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    @IBAction func servicesBtnAction(_ sender: Any) {
+        
+        
+        var vc = TermsOfServicesController()
+        
+        if #available(iOS 13.0, *) {
+            
+           vc = homeStoryBoard.instantiateViewController(identifier:"TermsOfServicesController" ) as! TermsOfServicesController
+            
+        } else {
+            // Fallback on earlier versions
+            
+            vc = homeStoryBoard.instantiateViewController(withIdentifier:"TermsOfServicesController" ) as! TermsOfServicesController
+            
+        }
+           self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
     //MARK:- Custom Methods
     
     @objc func swiped(gesture: UIGestureRecognizer) {
@@ -98,7 +140,7 @@ class ViewController: UIViewController {
                 
                 self.titleLabel.text = self.onBoardingArray[imageIndex].title
                 self.descrptionLabel.text = self.onBoardingArray[imageIndex].long_description
-                self.bottomLabel.text = self.onBoardingArray[imageIndex].short_description
+                //self.bottomLabel.text = self.onBoardingArray[imageIndex].short_description
                 
                 
             case UISwipeGestureRecognizer.Direction.left:
@@ -122,7 +164,7 @@ class ViewController: UIViewController {
                 
                 self.titleLabel.text = self.onBoardingArray[imageIndex].title
                 self.descrptionLabel.text = self.onBoardingArray[imageIndex].long_description
-                self.bottomLabel.text = self.onBoardingArray[imageIndex].short_description
+                //self.bottomLabel.text = self.onBoardingArray[imageIndex].short_description
                 
                 
                 
@@ -199,7 +241,7 @@ class ViewController: UIViewController {
                             
                             self.titleLabel.text = self.onBoardingArray[0].title
                             self.descrptionLabel.text = self.onBoardingArray[0].long_description
-                            self.bottomLabel.text = self.onBoardingArray[0].short_description
+//                            self.bottomLabel.text = self.onBoardingArray[0].short_description
                             
                         }
                         

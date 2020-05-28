@@ -211,6 +211,10 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                    ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Date of birth  is required.", vc: self)
                     
                     
+                }  else if profileObjc.country_id == "0" || profileObjc.country_id.isEmpty  {
+                    
+                     ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Nationality is required", vc: self)
+                    
                 } else if emailTextField.text!.count > 25  {
                     
                      ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: "Email  should be 20 characters maximum", vc: self)
@@ -362,6 +366,10 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                                 
                                 let objc = ProjectManager.sharedInstance.GetLoginDataObjects(dict: data)
                                 self.profileObjc = objc
+                                
+                                UserDefaults.standard.set(objc.first_name, forKey: "user_Name")
+
+                                
                                 self.setupUI()
                                                                 
                             }
@@ -454,11 +462,17 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                             let msg = ProjectManager.sharedInstance.checkResponseForString(jsonKey:"message", dict: json as NSDictionary)
                             if status.boolValue {
                                 
+                                
+                                userName = self.profileObjc.first_name
+                                UserDefaults.standard.set(self.profileObjc.first_name, forKey: "user_Name")
+
+
                                 if let data = json["data"] as? [String: Any] {
                                     
     //                                let objc = ProjectManager.sharedInstance.GetLoginDataObjects(dict: data)
     //
-                                    
+                                    ProjectManager.sharedInstance.NameDelegate?.getUserName()
+
                                     if #available(iOS 13.0, *) {
                                         let vc = mainStoryBoard.instantiateViewController(identifier: "AdditionalInfoViewController") as! AdditionalInfoViewController
                                         
@@ -490,6 +504,7 @@ class CompleteProfileViewController: UIViewController , UITextFieldDelegate, UIP
                                     }
 
                                     
+
                                     ProjectManager.sharedInstance.showAlertwithTitle(title: "", desc: msg as String, vc: self)
                                     
                                     

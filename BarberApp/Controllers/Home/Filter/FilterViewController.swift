@@ -12,7 +12,7 @@ import RangeSeekSlider
 
 
 protocol  FilterViewControllerProtocol {
-    func updateView(filter_param:[String:String])
+    func updateView(filter_param:[String:Any])
 }
 
 class FilterViewController: UIViewController {
@@ -24,7 +24,7 @@ class FilterViewController: UIViewController {
     var servicesArray = [ServiceListObject]()
     var tmpServicesArray = [ServiceListObject]()
     var nationalityArray = [NationalityObject]()
-    var selectedFilterParam = [String:String]()
+    var selectedFilterParam = [String:Any]()
     var headerTitles = ["Service Type" , "Options" , "Price", "Distance" , "Barber Nationality" , "Sort By"]
     var priceFilter = "", serviceAtHome = false, hasCreditCard = false, openNow = false, priceSwitch = false, popularitySwitch = false, ratingSwitch = false
     var isMoreService = Bool()
@@ -65,19 +65,21 @@ class FilterViewController: UIViewController {
     
     @objc func cheapPriceBtn()
     {
-        priceFilter = "$"
+        
+        priceFilter = priceFilter == "$" ? "" : "$"
+        
         filterCollectionVow.reloadData()
     }
     
     @objc func mediumPriceBtn()
     {
-        priceFilter = "$$"
+      priceFilter = priceFilter == "$$" ? "" : "$$"
         filterCollectionVow.reloadData()
     }
     
     @objc func maxPriceBtn()
     {
-        priceFilter = "$$$"
+       priceFilter = priceFilter == "$$$" ? "" : "$$$"
         filterCollectionVow.reloadData()
     }
     
@@ -114,13 +116,13 @@ class FilterViewController: UIViewController {
     func setSelectedFilter()  {
         if selectedFilterParam.count > 0
         {
-            priceFilter = selectedFilterParam["price_range"]!
-            rangeSliderValue = selectedFilterParam["distance"]!
-            hasCreditCard = selectedFilterParam["avail_credit_card"]! == "1" ? true : false
-            priceSwitch = selectedFilterParam["sort_by_price"]! == "1" ? true : false
-            popularitySwitch = selectedFilterParam["sort_by_customers"]! == "1" ? true : false
-            serviceAtHome = selectedFilterParam["service_at_home"]! == "1" ? true : false
-            ratingSwitch = selectedFilterParam["sort_by_rating"]! == "1" ? true : false
+            priceFilter = selectedFilterParam["price_range"] as! String
+            rangeSliderValue = selectedFilterParam["distance"] as! String
+            hasCreditCard = selectedFilterParam["avail_credit_card"] as! String == "1" ? true : false
+            priceSwitch = selectedFilterParam["sort_by_price"] as! String == "1" ? true : false
+            popularitySwitch = selectedFilterParam["sort_by_customers"] as! String == "1" ? true : false
+            serviceAtHome = selectedFilterParam["service_at_home"] as! String == "1" ? true : false
+            ratingSwitch = selectedFilterParam["sort_by_rating"] as! String == "1" ? true : false
 
             
             
@@ -129,7 +131,7 @@ class FilterViewController: UIViewController {
                 openNow = true
             }
 
-            if let service_type_id =  selectedFilterParam["service_type_id"] {
+            if let service_type_id =  selectedFilterParam["service_type_id"] as? String {
                 let serviceStrArray = service_type_id.split(separator: ",")
                 for service_id in serviceStrArray {
                     servicesArray.map { (item: ServiceListObject) -> ServiceListObject in
@@ -141,7 +143,7 @@ class FilterViewController: UIViewController {
                 }
             }
             
-            if let  nationality = selectedFilterParam["nationality"] {
+            if let  nationality = selectedFilterParam["nationality"]  as? String{
                 let nationalityStrArray = nationality.split(separator: ",")
                 
                 
@@ -170,6 +172,7 @@ class FilterViewController: UIViewController {
             filterCollectionVow.reloadData()
             
         }
+        
     }
     
     func resetAllFilter()  {
@@ -199,8 +202,8 @@ class FilterViewController: UIViewController {
     }
     
     
-    func getFilterUrl() -> [String:String] {
-        var param = [String:String]()
+    func getFilterUrl() -> [String:Any] {
+        var param = [String:Any]()
         var serviceTypeStr = ""
         let dateFormatter = DateFormatter()
         var nationalityStr = ""
@@ -627,7 +630,7 @@ extension FilterViewController: UICollectionViewDelegate , UICollectionViewDataS
                 cell.maxPriceBtn.setTitleColor(.black, for: .normal)
                 cell.cheapPriceBtn.setTitleColor(.black, for: .normal)
             }
-            else if priceFilter == "$$"
+            else if priceFilter == "$$$"
             {
                 cell.maxPriceBtn.backgroundColor = #colorLiteral(red: 0.1309883595, green: 0.2987812161, blue: 0.5047755837, alpha: 1)
                 cell.mediumPriceBtn.backgroundColor = #colorLiteral(red: 0.8758473396, green: 0.9036368132, blue: 0.9300265908, alpha: 1)

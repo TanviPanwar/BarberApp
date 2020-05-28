@@ -22,9 +22,9 @@ class DiscoverViewController: UIViewController {
     var availableTimeSlots = ["01 AM", "02 AM", "03 AM" ,"10 AM" ,"11 AM", "12 PM" , "03 PM" , "04 PM", "07 PM",]
     var discoverObjectArray = [BarbarDiscoverObject]()
      var selectedServiceType = ""
-    var filter_param = [String:String]()
+    var filter_param = [String:Any]()
     var userLocation: (Double,Double) = (lat : 0.0,long : 0.0)
-    
+    var selectedServiceIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         listBtn.roundCorners(corners: [.topLeft, .bottomLeft], radius: 17.5)
@@ -45,14 +45,17 @@ class DiscoverViewController: UIViewController {
     @IBAction func filterBtn(_ sender: UIButton) {
         var rangeMinValue: CGFloat = 0, rangeMaxValue : CGFloat = 30
         if filter_param.count > 0 {
-            let  rangeSliderValue = filter_param["distance"]!
+           if let  rangeSliderValue = filter_param["distance"] as? String
+           {
             if rangeSliderValue.count > 0
-            {
-                let valueArray = rangeSliderValue.split(separator: "-")
-                rangeMinValue = CGFloat(Double(valueArray[0]) ?? 1)
-                rangeMaxValue = CGFloat(Double(valueArray[1]) ?? 30)
-                
+                       {
+                        let valueArray = rangeSliderValue.split(separator: "-")
+                           rangeMinValue = CGFloat(Double(valueArray[0]) ?? 1)
+                           rangeMaxValue = CGFloat(Double(valueArray[1]) ?? 30)
+                           
+                       }
             }
+           
         }
         
         
@@ -84,18 +87,18 @@ class DiscoverViewController: UIViewController {
             self.mapBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             self.listBtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             self.listBtn.setTitleColor(#colorLiteral(red: 0.05763856322, green: 0.2982799113, blue: 0.5071055889, alpha: 1), for: .normal)
-        if #available(iOS 13.0, *) {
-                  
-                  let vc = mainStoryBoard.instantiateViewController(identifier:"MapViewController") as! MapViewController
-                
-            self.navigationController?.pushViewController(vc, animated: true)
-                  
-              } else {
-                  // Fallback on earlier versions
-                  
-                  let vc = mainStoryBoard.instantiateViewController(withIdentifier:"MapViewController") as! MapViewController
-             self.navigationController?.pushViewController(vc, animated: true)
-        }
+//        if #available(iOS 13.0, *) {
+//
+//                  let vc = mainStoryBoard.instantiateViewController(identifier:"MapViewController") as! MapViewController
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//              } else {
+//                  // Fallback on earlier versions
+//
+//                  let vc = mainStoryBoard.instantiateViewController(withIdentifier:"MapViewController") as! MapViewController
+//             self.navigationController?.pushViewController(vc, animated: true)
+//        }
         
     }
     @IBAction func listBtnClick(_ sender: Any) {
@@ -136,6 +139,25 @@ class DiscoverViewController: UIViewController {
     //
     
     
+    
+    func scrollToSelectedService( )    {
+        if !self.selectedServiceType.isEmpty
+                                  {
+                                      for (index,service) in self.servicesArray.enumerated() {
+                                          if service.service_id == self.selectedServiceType {
+                                              self.selectedServiceIndex = index
+                                            break
+                                          }
+                                      }
+                                    
+                                    serviceCollectionViw.scrollToItem(at: IndexPath(item: selectedServiceIndex, section: 0), at: .centeredHorizontally, animated: true)
+                                  }
+        else
+        {
+             serviceCollectionViw.scrollToItem(at: IndexPath(item: selectedServiceIndex, section: 0), at: .centeredHorizontally, animated: true)
+        }
+        
+    }
     
     
     func getTimeSlots()  -> [TimeObj] {
@@ -235,8 +257,9 @@ class DiscoverViewController: UIViewController {
                             }
                             
                             self.noDataFoundLbl.isHidden = true
-                            
+                          
                             self.tableView.reloadData()
+                              self.serviceCollectionViw.reloadData()
                             
                             
                         } else {
@@ -244,6 +267,7 @@ class DiscoverViewController: UIViewController {
                             DispatchQueue.main.async {
                                 self.discoverObjectArray.removeAll()
                                 self.tableView.reloadData()
+                                  self.serviceCollectionViw.reloadData()
                                  self.noDataFoundLbl.isHidden = false
                                // ProjectManager.sharedInstance.showServerError(viewController: self)
                                 
@@ -322,6 +346,7 @@ class DiscoverViewController: UIViewController {
                           
                                
                                self.serviceCollectionViw.reloadData()
+                              self.scrollToSelectedService()
                                
                                
                            } else {
@@ -400,7 +425,7 @@ class DiscoverViewController: UIViewController {
                                     self.addTimeSlots()
                                }
                                 self.noDataFoundLbl.isHidden = true
-                        
+                            self.serviceCollectionViw.reloadData()
                                self.tableView.reloadData()
                                
                                
@@ -408,6 +433,7 @@ class DiscoverViewController: UIViewController {
                                
                                DispatchQueue.main.async {
                                 self.discoverObjectArray.removeAll()
+                                self.serviceCollectionViw.reloadData()
                                 self.tableView.reloadData()
                                  self.noDataFoundLbl.isHidden = false
                                    //ProjectManager.sharedInstance.showServerError(viewController: self)
@@ -511,7 +537,7 @@ class DiscoverViewController: UIViewController {
               }
     
     
-    func applyFilterDataAPI(param:[String:String])
+    func applyFilterDataAPI(param:[String:Any])
                  {
                      if ProjectManager.sharedInstance.isInternetAvailable()
                      {
@@ -528,7 +554,8 @@ class DiscoverViewController: UIViewController {
                          
                          //"Accept": "application/json"
                         print(headers)
-                         
+                        print(params)
+                            print(Base_Url+filter_barber_url)
                          Alamofire.request(Base_Url+filter_barber_url, method: .post,  parameters: params, encoding: URLEncoding.default, headers:headers)
                              .responseJSON { response in
                                  
@@ -561,7 +588,10 @@ class DiscoverViewController: UIViewController {
                                           self.addTimeSlots()
                                      }
                                       self.noDataFoundLbl.isHidden = true
-                              
+                                    self.selectedServiceType = ""
+                                    self.selectedServiceIndex = 0
+                                    self.serviceCollectionViw.reloadData()
+                                    self.scrollToSelectedService()
                                      self.tableView.reloadData()
                                      
                                      
@@ -569,7 +599,11 @@ class DiscoverViewController: UIViewController {
                                      
                                      DispatchQueue.main.async {
                                        self.discoverObjectArray.removeAll()
+                                        self.selectedServiceType = ""
+                                                                           self.selectedServiceIndex = 0
+                                                                           self.serviceCollectionViw.reloadData()
                                        self.tableView.reloadData()
+                                         self.scrollToSelectedService()
                                        self.noDataFoundLbl.isHidden = false
                                       //   ProjectManager.sharedInstance.showServerError(viewController: self)
                                          
@@ -707,7 +741,17 @@ extension DiscoverViewController:UICollectionViewDelegate , UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView ==  serviceCollectionViw {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ServiceCell", for: indexPath) as? ServiceCell else {return UICollectionViewCell()}
+            if indexPath.row == selectedServiceIndex
+            {
+                cell.bottomLbl.isHidden = false
+            }
+            else
+            {
+                cell.bottomLbl.isHidden = true
+            }
+            
             cell.serviceNameLbl.text = servicesArray[indexPath.item].name
+            
             return cell
         } else {
             
@@ -731,10 +775,13 @@ extension DiscoverViewController:UICollectionViewDelegate , UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
           if collectionView ==  serviceCollectionViw {
             if servicesArray[indexPath.row].service_id != "" {
+                selectedServiceIndex = indexPath.row
                 getServiceListFilterDataAPI(service_id: servicesArray[indexPath.row].service_id)
             }
             else
             {
+                selectedServiceType = ""
+                 selectedServiceIndex = indexPath.row
                 getBarbarDiscoverDataAPI()
                 
             }
@@ -829,7 +876,7 @@ extension DiscoverViewController : UITextFieldDelegate
 
 extension DiscoverViewController : FilterViewControllerProtocol
 {
-    func updateView(filter_param: [String : String]) {
+    func updateView(filter_param: [String : Any]) {
         if filter_param.count > 0 {
             print(filter_param)
             applyFilterDataAPI(param: filter_param)

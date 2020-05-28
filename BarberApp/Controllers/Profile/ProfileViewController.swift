@@ -9,7 +9,12 @@
 import UIKit
 import Alamofire
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, getStatusDelegate {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, getStatusDelegate, getUserNameDelegate {
+    func getUserName() {
+        
+        profileName.text = UserDefaults.standard.value(forKey: "user_Name") as? String
+    }
+    
     
     func getServiceProviderStatus() {
         
@@ -51,7 +56,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
         
         ProjectManager.sharedInstance.statusDelegate = self
+        ProjectManager.sharedInstance.NameDelegate = self
+        
         profileTableView.tableFooterView = UIView()
+        
+        
+        if UserDefaults.standard.value(forKey: "user_Name") != nil {
+            
+        profileName.text = UserDefaults.standard.value(forKey: "user_Name") as? String
+            
+        }
 
         self.getStatusApi()
     }
@@ -261,13 +275,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     cell.onTitleButtonTapped = {
                         
-                           var vc = RegisterAsBarberController()
-                           //var vc = ReceiveJobsViewController()
+                         var vc = RegisterAsBarberController()
+                          // var vc = SelectServicesViewController()
                         
                         if #available(iOS 13.0, *) {
                           vc = homeStoryBoard.instantiateViewController(identifier:"RegisterAsBarberController" ) as! RegisterAsBarberController
                             
-                              // vc = mainStoryBoard.instantiateViewController(withIdentifier:"ReceiveJobsViewController" ) as! ReceiveJobsViewController
+                             //  vc = mainStoryBoard.instantiateViewController(withIdentifier:"SelectServicesViewController" ) as! SelectServicesViewController
                             
                             
                         } else {
@@ -276,7 +290,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                              vc = homeStoryBoard.instantiateViewController(withIdentifier:"RegisterAsBarberController" ) as! RegisterAsBarberController
                             
                             
-                              // vc = mainStoryBoard.instantiateViewController(withIdentifier:"ReceiveJobsViewController" ) as! ReceiveJobsViewController
+                               //vc = mainStoryBoard.instantiateViewController(withIdentifier:"SelectServicesViewController" ) as! SelectServicesViewController
                             
                         }
                         self.present(vc, animated: true, completion: nil)
@@ -477,6 +491,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             cell.cellTitleBtn.setTitle(supportRowArraay[indexPath.row], for: .normal)
             cell.cellImage.image = supportImageArray[indexPath.row]
+            cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            cell.cellTitleBtn.isEnabled = true
+
             
             if indexPath.row == 0 {
                 
@@ -527,6 +544,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             
             cell.cellTitleBtn.setTitle(legalRowArraay[indexPath.row], for: .normal)
+            cell.cellTitleBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            cell.cellTitleBtn.isEnabled = true
             
             if indexPath.row == 0 {
                 

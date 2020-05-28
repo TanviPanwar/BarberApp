@@ -11,7 +11,7 @@ import MRCountryPicker
 import Alamofire
 
 
-class MobileViewController: UIViewController {
+class MobileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var flag_ImgViw: UIImageView!
     
     @IBOutlet weak var backBtn: UIButton!
@@ -19,6 +19,11 @@ class MobileViewController: UIViewController {
     @IBOutlet weak var countrycode_Lbl: UILabel!
     @IBOutlet weak var countryPicker: MRCountryPicker!
     @IBOutlet weak var pickerContainerView: UIView!
+    @IBOutlet weak var countryDropdownBtn: UIButton!
+    @IBOutlet weak var lineLabel: UILabel!
+    @IBOutlet weak var alertLabel: UILabel!
+    var charset = CharacterSet()
+    
     
     var countryCode = String()
     var flagImg = UIImage()
@@ -39,22 +44,89 @@ class MobileViewController: UIViewController {
 
         }
         
+         charset = CharacterSet(charactersIn: "3, 5 ,6 ,7")
+         
+        
         countryPicker.tintColor = .black
         countryPicker.countryPickerDelegate = self
         countryPicker.showPhoneNumbers = true
         countryPicker.setCountry("SI")
-        countryPicker.setCountryByName("Canada")
-        countrycode_Lbl.text =  "+1"
-        flag_ImgViw.image = #imageLiteral(resourceName: "CA")
+        countryPicker.setCountryByName("Qatar")
+        countrycode_Lbl.text =  "+974"
+        flag_ImgViw.image = #imageLiteral(resourceName: "qatar-flag-round-small")
+        countryDropdownBtn.isEnabled = false
         // Do any additional setup after loading the view.
     }
+    
+    
+    // MARK: - TextField Delegates
+
+      func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+          
+        lineLabel.backgroundColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.5058823529, alpha: 1)
+        alertLabel.isHidden = true
+          if textField == mobile_TxtFld {
+              let maxLength = 8
+              let currentString: NSString = textField.text! as NSString
+              let newString: NSString =
+                  currentString.replacingCharacters(in: range, with: string) as NSString
+              return newString.length <= maxLength
+              
+          }
+        
+        return true
+           
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        lineLabel.backgroundColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.5058823529, alpha: 1)
+        alertLabel.isHidden = true
+   
+        
+    }
+    
+    
     
     //MARK:-
     //MARK:- IBAction Methods
     
     @IBAction func goTonextScreenBtnAction(_ sender: Any) {
         
-        otpApi()
+        let mobile = mobile_TxtFld.text?.prefix(1)
+        
+        if mobile_TxtFld.text!.isEmpty {
+            
+            lineLabel.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.1887762642, blue: 0.1555743321, alpha: 1)
+            alertLabel.isHidden = false
+            alertLabel.text = "Please enter phone number."
+           
+            
+            
+        } else if mobile_TxtFld.text!.count < 8 {
+            
+            
+            lineLabel.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.1887762642, blue: 0.1555743321, alpha: 1)
+            alertLabel.isHidden = false
+            alertLabel.text = "Phone number should be atleast 8 characters."
+            
+            
+            
+            
+        } else if mobile!.rangeOfCharacter(from: charset) == nil {
+
+            lineLabel.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.1887762642, blue: 0.1555743321, alpha: 1)
+            alertLabel.isHidden = false
+            alertLabel.text = "Phone number must start with 3,5,6,7 only."
+        }
+        
+        
+        else {
+        
+        
+           otpApi()
+            
+        }
         
     }
     
@@ -104,48 +176,7 @@ class MobileViewController: UIViewController {
             
             let mobile = (mobile_TxtFld.text?.trimmingCharacters(in: CharacterSet.whitespaces))!
             let countryCode = (countrycode_Lbl.text?.trimmingCharacters(in: CharacterSet.whitespaces))!
-            
-            
-            if mobile.isEmpty {
-                
-                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert!", desc: "Please enter phone number.", vc: self)
-                //
-                
-                //                let alertController =  UIAlertController(title:"Alert!" , message: "Please enter phone number.", preferredStyle: .alert)
-                //                let okAction = UIAlertAction(title:"Ok", style: .cancel)
-                //
-                //
-                //                alertController.addAction(okAction)
-                //                self.present(alertController, animated: true, completion:nil)
-                
-                
-            } else if mobile.count < 8 {
-                
-                ProjectManager.sharedInstance.showAlertwithTitle(title: "Alert!", desc: "Phone number should be atleast 8 characters minimum.", vc: self)
-                
-                //                let alertController =  UIAlertController(title:"Alert!" , message: "Phone number should be atleast 8 characters minimum.", preferredStyle: .alert)
-                //                               let okAction = UIAlertAction(title:"Ok", style: .cancel)
-                //
-                //
-                //                               alertController.addAction(okAction)
-                //                               self.present(alertController, animated: true, completion:nil)
-                
-                
-            }
-                //            else if mobile.count >= 9 {
-                //
-                //                    let alertController =  UIAlertController(title:"Alert!" , message: "Phone number should be  8 characters .", preferredStyle: .alert)
-                //                                   let okAction = UIAlertAction(title:"Ok", style: .cancel)
-//
-//
-//                                   alertController.addAction(okAction)
-//                                   self.present(alertController, animated: true, completion:nil)
-//
-//
-//                }
-            
-            
-            else {
+
 
             let params = ["phone_number":mobile , "country_code":countryCode] as [String: Any]
             print(params)
@@ -217,8 +248,6 @@ class MobileViewController: UIViewController {
                         }
                     }
             }
-            
-         }
             
         }
             

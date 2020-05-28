@@ -32,6 +32,10 @@
 		0C784B77242E3B45009DE401 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C784B76242E3B45009DE401 /* ThankYouViewController.swift */; };
 		0C7932E6242B22160077D5A5 /* SelectServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7932E5242B22160077D5A5 /* SelectServicesViewController.swift */; };
 		0C8FFE3F247833FC00E8E579 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE3E247833FC00E8E579 /* CustomUITextField.swift */; };
+		0C8FFE41247C01BD00E8E579 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE40247C01BD00E8E579 /* HomeViewController.swift */; };
+		0C8FFE43247C01F200E8E579 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE42247C01F100E8E579 /* FilterViewController.swift */; };
+		0C8FFE45247C021700E8E579 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE44247C021700E8E579 /* DiscoverViewController.swift */; };
+		0C8FFE47247C023E00E8E579 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FFE46247C023E00E8E579 /* DiscoverTableViewCell.swift */; };
 		0CA681532473E65A00E2992D /* TermsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA681522473E65A00E2992D /* TermsObject.swift */; };
 		0CB0361524780979008AB11A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB0361424780979008AB11A /* Home.storyboard */; };
 		0CB0361724780983008AB11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB0361624780983008AB11A /* Main.storyboard */; };
@@ -54,11 +58,9 @@
 		0F3597FA24125BD0007196C8 /* PinCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3597F524125BD0007196C8 /* PinCodeTextFieldDelegate.swift */; };
 		0F3597FB24125BD0007196C8 /* PinCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3597F624125BD0007196C8 /* PinCodeTextField.swift */; };
 		0F3597FD24127181007196C8 /* TabBarVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3597FC24127181007196C8 /* TabBarVcViewController.swift */; };
-		0F35980824127A99007196C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35980724127A99007196C8 /* HomeViewController.swift */; };
 		0F35980C24127B1A007196C8 /* MyBarbersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35980B24127B1A007196C8 /* MyBarbersTableCell.swift */; };
 		0F3CFB3D241673DA00417589 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CFB3C241673DA00417589 /* FilterCollectionViewCell.swift */; };
 		0F50344F241F8D68006ACB2F /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50344E241F8D68006ACB2F /* FilterHeaderView.swift */; };
-		0F503451241F8D89006ACB2F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F503450241F8D88006ACB2F /* FilterViewController.swift */; };
 		0F640F022428981D00F7D0BE /* BarberHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F640F012428981D00F7D0BE /* BarberHomeViewController.swift */; };
 		0F640F042428A88700F7D0BE /* BarberHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F640F032428A88700F7D0BE /* BarberHomeTableViewCell.swift */; };
 		0F640F0A242A03FD00F7D0BE /* BarberSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F640F09242A03FD00F7D0BE /* BarberSettingsViewController.swift */; };
@@ -79,8 +81,6 @@
 		0FC99E992422199000627FCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC99E972422199000627FCA /* ProfileViewController.swift */; };
 		0FC99E9B24224A8E00627FCA /* ScheduleAppointmentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC99E9A24224A8E00627FCA /* ScheduleAppointmentSheet.swift */; };
 		0FCE78902416202A00CCD552 /* NearbyBarbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE788F2416202A00CCD552 /* NearbyBarbersCell.swift */; };
-		0FCE78922416488500CCD552 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE78912416488500CCD552 /* DiscoverViewController.swift */; };
-		0FCE789424164C3900CCD552 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE789324164C3900CCD552 /* DiscoverTableViewCell.swift */; };
 		0FE3A6F924234A3C00C152CA /* CustomerAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6F824234A3C00C152CA /* CustomerAddressViewController.swift */; };
 		0FE3A6FB24234A8400C152CA /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6FA24234A8300C152CA /* ProjectManager.swift */; };
 		0FE3A6FE2423670100C152CA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3A6FD2423670100C152CA /* HelpViewController.swift */; };
@@ -120,6 +120,10 @@
 		0C784B76242E3B45009DE401 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		0C7932E5242B22160077D5A5 /* SelectServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesViewController.swift; sourceTree = "<group>"; };
 		0C8FFE3E247833FC00E8E579 /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
+		0C8FFE40247C01BD00E8E579 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0C8FFE42247C01F100E8E579 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		0C8FFE44247C021700E8E579 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		0C8FFE46247C023E00E8E579 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		0CA681522473E65A00E2992D /* TermsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsObject.swift; sourceTree = "<group>"; };
 		0CB0361424780979008AB11A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0CB0361624780983008AB11A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -144,11 +148,9 @@
 		0F3597F524125BD0007196C8 /* PinCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		0F3597F624125BD0007196C8 /* PinCodeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeTextField.swift; sourceTree = "<group>"; };
 		0F3597FC24127181007196C8 /* TabBarVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVcViewController.swift; sourceTree = "<group>"; };
-		0F35980724127A99007196C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F35980B24127B1A007196C8 /* MyBarbersTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarbersTableCell.swift; sourceTree = "<group>"; };
 		0F3CFB3C241673DA00417589 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F50344E241F8D68006ACB2F /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
-		0F503450241F8D88006ACB2F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		0F640F012428981D00F7D0BE /* BarberHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberHomeViewController.swift; sourceTree = "<group>"; };
 		0F640F032428A88700F7D0BE /* BarberHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberHomeTableViewCell.swift; sourceTree = "<group>"; };
 		0F640F062429DA9E00F7D0BE /* BarberBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberBookingViewController.swift; sourceTree = "<group>"; };
@@ -170,8 +172,6 @@
 		0FC99E972422199000627FCA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FC99E9A24224A8E00627FCA /* ScheduleAppointmentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointmentSheet.swift; sourceTree = "<group>"; };
 		0FCE788F2416202A00CCD552 /* NearbyBarbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyBarbersCell.swift; sourceTree = "<group>"; };
-		0FCE78912416488500CCD552 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		0FCE789324164C3900CCD552 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		0FE3A6F824234A3C00C152CA /* CustomerAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddressViewController.swift; sourceTree = "<group>"; };
 		0FE3A6FA24234A8300C152CA /* ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
 		0FE3A6FD2423670100C152CA /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -296,9 +296,9 @@
 			children = (
 				0FE3A6F724234A1E00C152CA /* CustomerAddress */,
 				0F503445241F8BD9006ACB2F /* Filter */,
+				0C8FFE40247C01BD00E8E579 /* HomeViewController.swift */,
+				0C8FFE44247C021700E8E579 /* DiscoverViewController.swift */,
 				0F3597FC24127181007196C8 /* TabBarVcViewController.swift */,
-				0F35980724127A99007196C8 /* HomeViewController.swift */,
-				0FCE78912416488500CCD552 /* DiscoverViewController.swift */,
 				0FC99E9A24224A8E00627FCA /* ScheduleAppointmentSheet.swift */,
 				0F69D8A62420ECC60045248D /* NearByBarbers */,
 			);
@@ -331,7 +331,7 @@
 			children = (
 				0F35980B24127B1A007196C8 /* MyBarbersTableCell.swift */,
 				0FCE788F2416202A00CCD552 /* NearbyBarbersCell.swift */,
-				0FCE789324164C3900CCD552 /* DiscoverTableViewCell.swift */,
+				0C8FFE46247C023E00E8E579 /* DiscoverTableViewCell.swift */,
 				0F3CFB3C241673DA00417589 /* FilterCollectionViewCell.swift */,
 				0F69D8A92420ED2F0045248D /* TopSliderTableViewCell.swift */,
 				0F640F032428A88700F7D0BE /* BarberHomeTableViewCell.swift */,
@@ -342,7 +342,7 @@
 		0F503445241F8BD9006ACB2F /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				0F503450241F8D88006ACB2F /* FilterViewController.swift */,
+				0C8FFE42247C01F100E8E579 /* FilterViewController.swift */,
 				0F50344E241F8D68006ACB2F /* FilterHeaderView.swift */,
 			);
 			path = Filter;
@@ -657,13 +657,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C62D1EB24691E9A000894FF /* ScheduleViewController.swift in Sources */,
-				0F503451241F8D89006ACB2F /* FilterViewController.swift in Sources */,
 				0F69D89D2420CC710045248D /* BookingsTableViewCell.swift in Sources */,
 				0F35980C24127B1A007196C8 /* MyBarbersTableCell.swift in Sources */,
 				0C75EF15245E30F80081A3CD /* UIView+Constraints.swift in Sources */,
 				0FA177E8242370A80050D625 /* FeedbackViewController.swift in Sources */,
 				0F3597FD24127181007196C8 /* TabBarVcViewController.swift in Sources */,
-				0FCE789424164C3900CCD552 /* DiscoverTableViewCell.swift in Sources */,
 				0F3597FA24125BD0007196C8 /* PinCodeTextFieldDelegate.swift in Sources */,
 				A226E6C12477FD7D00B2BBAB /* LocationService.swift in Sources */,
 				0C7932E6242B22160077D5A5 /* SelectServicesViewController.swift in Sources */,
@@ -687,9 +685,9 @@
 				0C67B1672456FF220084CF2E /* InstgramConstants.swift in Sources */,
 				0FC99E992422199000627FCA /* ProfileViewController.swift in Sources */,
 				0CE4BADA2434A620006F6D5D /* NoBookingsViewController.swift in Sources */,
+				0C8FFE45247C021700E8E579 /* DiscoverViewController.swift in Sources */,
 				0FA177EE242391900050D625 /* RegisterAsBarberController.swift in Sources */,
 				0C67B169245701F80084CF2E /* InstgramLoginWebViewController.swift in Sources */,
-				0F35980824127A99007196C8 /* HomeViewController.swift in Sources */,
 				0F3597FB24125BD0007196C8 /* PinCodeTextField.swift in Sources */,
 				0C5CEA8624234E6E0029C07A /* EditProfileViewController.swift in Sources */,
 				A226E6C32477FD7D00B2BBAB /* ProjectManager2.swift in Sources */,
@@ -697,6 +695,8 @@
 				0CD02EE62423707E0009F577 /* CompleteProfileViewController.swift in Sources */,
 				0CD02EE8242371E10009F577 /* AdditionalInfoViewController.swift in Sources */,
 				0C784B75242D06FC009DE401 /* ComplainBookingViewController.swift in Sources */,
+				0C8FFE41247C01BD00E8E579 /* HomeViewController.swift in Sources */,
+				0C8FFE47247C023E00E8E579 /* DiscoverTableViewCell.swift in Sources */,
 				0F69D8A22420CC7A0045248D /* NotificationTableViewCell.swift in Sources */,
 				0F1088C32411144500E4AF5A /* BarberApp.xcdatamodeld in Sources */,
 				A226E6BF2477FD7D00B2BBAB /* NationalityObject.swift in Sources */,
@@ -706,13 +706,13 @@
 				0C716BCE246D2AE400AB25B3 /* AdditionalInfoObject.swift in Sources */,
 				0FA177EB2423813A0050D625 /* TermsOfServicesController.swift in Sources */,
 				0F69D8A52420D4D40045248D /* TopNearByBarbersController.swift in Sources */,
+				0C8FFE43247C01F200E8E579 /* FilterViewController.swift in Sources */,
 				0F50344F241F8D68006ACB2F /* FilterHeaderView.swift in Sources */,
 				0FCE78902416202A00CCD552 /* NearbyBarbersCell.swift in Sources */,
 				0C40721A2476DF2C002A77FE /* ProfileTableViewCell.swift in Sources */,
 				0F9BE31524122AFF00802712 /* MobileViewController.swift in Sources */,
 				0F69D8A82420ED110045248D /* BarberDetailViewController.swift in Sources */,
 				0C75EF0F245B1EF20081A3CD /* ScheduleObject.swift in Sources */,
-				0FCE78922416488500CCD552 /* DiscoverViewController.swift in Sources */,
 				0C34BAD1244DB70000D0CD78 /* CountryObject.swift in Sources */,
 				0F1088B92411144500E4AF5A /* AppDelegate.swift in Sources */,
 				0CA681532473E65A00E2992D /* TermsObject.swift in Sources */,
@@ -871,7 +871,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = E2K34DPS6D;
 				INFOPLIST_FILE = BarberApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -894,7 +894,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = E2K34DPS6D;
 				INFOPLIST_FILE = BarberApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

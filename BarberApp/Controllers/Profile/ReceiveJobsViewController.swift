@@ -459,7 +459,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"  //"hh:mm:ss a"
                 
                 
                 let dateFormat1 =  DateFormatter()
@@ -508,12 +508,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     
                                     if let indexs = array.firstIndex(where: {$0.identify == 1}) {
                                         
+                                        dateFormat.dateFormat = "HH:mm:ss"
                                         self.availTimeArray[index!].time_slots[indexs].time_from = dateFormat.string(from: datePickerStart.date)
                                         self.availTimeArray[index!].time_slots[indexs].time_to = dateFormat.string(from: datePickerEnd.date)
                                         
                                         
                                     } else {
                                         
+                                        dateFormat.dateFormat = "HH:mm:ss"
                                         objc.identify = 1
                                         objc.time_from = dateFormat.string(from: datePickerStart.date)
                                         objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -537,12 +539,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                             
                             if let indexs = array.firstIndex(where: {$0.identify == 1}) {
                                 
+                                dateFormat.dateFormat = "HH:mm:ss"
                                 self.availTimeArray[index!].time_slots[indexs].time_from = dateFormat.string(from: datePickerStart.date)
                                 self.availTimeArray[index!].time_slots[indexs].time_to = dateFormat.string(from: datePickerEnd.date)
                                 
                                 
                             } else {
                                 
+                                dateFormat.dateFormat = "HH:mm:ss"
                                 objc.identify = 1
                                 objc.time_from = dateFormat.string(from: datePickerStart.date)
                                 objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -557,6 +561,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                         } else {
                             
                            cell.timeRangeTextField.text = format.string(from: datePickerStart.date) + " - " +  format.string(from: datePickerEnd.date)
+                            
+                            dateFormat.dateFormat = "HH:mm:ss"
                             objc.identify = 1
                             objc.time_from = dateFormat.string(from: datePickerStart.date)
                             objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -576,6 +582,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                          cell.timeRangeTextField.text = format.string(from: datePickerStart.date) + " - " +  format.string(from: datePickerEnd.date)
                         
+                        
+                        dateFormat.dateFormat = "HH:mm:ss"
                         objc.time_from = dateFormat.string(from: datePickerStart.date)
                         objc.time_to = dateFormat.string(from: datePickerEnd.date)
                         objc.day = "Sunday"
@@ -605,7 +613,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"   //"hh:mm:ss a"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -653,12 +661,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                             
                                             if let indexs = array.firstIndex(where: {$0.identify == 2}) {
                                                 
+                                                dateFormat.dateFormat = "HH:mm:ss"
                                                 self.availTimeArray[index!].time_slots[indexs].time_from = dateFormat.string(from: datePickerStart.date)
                                                 self.availTimeArray[index!].time_slots[indexs].time_to = dateFormat.string(from: datePickerEnd.date)
                                                 
                                                 
                                             } else {
                                                 
+                                                dateFormat.dateFormat = "HH:mm:ss"
                                                 objc.identify = 2
                                                 objc.time_from = dateFormat.string(from: datePickerStart.date)
                                                 objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -681,12 +691,14 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                         
                                         if let indexs = array.firstIndex(where: {$0.identify == 2}) {
                                             
+                                            dateFormat.dateFormat = "HH:mm:ss"
                                             self.availTimeArray[index!].time_slots[indexs].time_from = dateFormat.string(from: datePickerStart.date)
                                             self.availTimeArray[index!].time_slots[indexs].time_to = dateFormat.string(from: datePickerEnd.date)
                                             
                                             
                                         } else {
                                             
+                                            dateFormat.dateFormat = "HH:mm:ss"
                                             objc.identify = 2
                                             objc.time_from = dateFormat.string(from: datePickerStart.date)
                                             objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -701,6 +713,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                 } else {
                                     
                                      cell.timeRangeTextField.text = format.string(from: datePickerStart.date) + " - " +  format.string(from: datePickerEnd.date)
+                                    
+                                    dateFormat.dateFormat = "HH:mm:ss"
                                     objc.identify = 2
                                     objc.time_from = dateFormat.string(from: datePickerStart.date)
                                     objc.time_to = dateFormat.string(from: datePickerEnd.date)
@@ -716,6 +730,8 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                 
                                  cell.timeRangeTextField.text = format.string(from: datePickerStart.date) + " - " +  format.string(from: datePickerEnd.date)
                                 
+                                
+                                dateFormat.dateFormat = "HH:mm:ss"
                                 objc.time_from = dateFormat.string(from: datePickerStart.date)
                                 objc.time_to = dateFormat.string(from: datePickerEnd.date)
                                 objc.time_slots.append(objc)
@@ -745,7 +761,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"  //"hh:mm:ss a"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -792,6 +808,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                                     cell.timeRangeTextField.text = format.string(from: datePickerStart.date) + " - " +  format.string(from: datePickerEnd.date)
                                     
                                     if let indexs = array.firstIndex(where: {$0.identify == 3}) {
+                                        
                                         
                                         self.availTimeArray[index!].time_slots[indexs].time_from = dateFormat.string(from: datePickerStart.date)
                                         self.availTimeArray[index!].time_slots[indexs].time_to = dateFormat.string(from: datePickerEnd.date)
@@ -888,7 +905,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"  //"hh:mm:ss a"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -1030,7 +1047,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -1174,7 +1191,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -1318,7 +1335,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 
                 let dateFormat1 =  DateFormatter()
@@ -1463,7 +1480,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 
                 let dateFormat1 =  DateFormatter()
@@ -1608,7 +1625,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -1752,7 +1769,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -1896,7 +1913,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 
                 let dateFormat1 =  DateFormatter()
@@ -2040,7 +2057,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 let dateFormat1 =  DateFormatter()
 
@@ -2182,7 +2199,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 
                 let dateFormat1 =  DateFormatter()
@@ -2327,7 +2344,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 let dateFormat =  DateFormatter()
                 
-                dateFormat.dateFormat = "hh:mm:ss a"
+                dateFormat.dateFormat = "HH:mm:ss"
                 
                 
                 
@@ -2708,7 +2725,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a" // "hh:mm:ss"
+                    //format.dateFormat = "hh:mm:ss" // "hh:mm:ss"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2717,14 +2734,22 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
                         
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                        let dateF = DateFormatter()
+                        dateF.dateFormat  = "H:mm"
+
+                        let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                        let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                        let timeFrom = dateF.date(from: String(fromStr))
+                        let timeTo = dateF.date(from: String(toStr))
+                        
+                        print(timeFrom!)
+                        print(timeTo!)
+                    
+                    dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                        
+                    let timeF = dateF.string(from: timeFrom!)
+                    let timesT = dateF.string(from: timeTo!)
 
                     cell.timeRangeTextField.text = timeF + " - " + timesT
                         
@@ -2808,7 +2833,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                    //format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2817,19 +2842,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -2917,7 +2950,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                  //  format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -2926,19 +2959,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -3020,7 +3061,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                    //format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3029,19 +3070,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -3125,7 +3174,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                    //format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3134,19 +3183,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -3231,7 +3288,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                   // format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3240,19 +3297,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -3336,7 +3401,7 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
                 if availTimeArray[index!].day_off_status == "1" {
                     
                 
-                    format.dateFormat = "hh:mm:ss a"
+                   // format.dateFormat = "hh:mm:ss a"
                     
                 
                     if self.availTimeArray[index!].time_slots[indexPath.row].time_from == "" || self.availTimeArray[index!].time_slots[indexPath.row].time_to == "" {
@@ -3345,19 +3410,27 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
 
                         
                     } else {
-                    
-                    let timeFrom = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_from)
-                    let timeTo = format.date(from:  self.availTimeArray[index!].time_slots[indexPath.row].time_to)
-                    
-                    format.dateFormat = "hh:mm a"
-                        
-                    let timeF = format.string(from: timeFrom!)
-                    let timesT = format.string(from: timeTo!)
+                            
+                            let dateF = DateFormatter()
+                            dateF.dateFormat  = "H:mm"
 
-                    cell.timeRangeTextField.text = timeF + " - " + timesT
+                            let fromStr = self.availTimeArray[index!].time_slots[indexPath.row].time_from.dropLast(3)
+                            let toStr = self.availTimeArray[index!].time_slots[indexPath.row].time_to.dropLast(3)
+                            let timeFrom = dateF.date(from: String(fromStr))
+                            let timeTo = dateF.date(from: String(toStr))
+                            
+                            print(timeFrom!)
+                            print(timeTo!)
                         
-                    
-                }
+                        dateF.dateFormat = "hh:mm a"  //"hh:mm a"
+                            
+                        let timeF = dateF.string(from: timeFrom!)
+                        let timesT = dateF.string(from: timeTo!)
+
+                        cell.timeRangeTextField.text = timeF + " - " + timesT
+                            
+                        
+                    }
                     
                     
                 } else {
@@ -4020,11 +4093,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 1 }) {
       
+                if  self.availTimeArray[index].time_slots.count < 2 {
+                
                     let obj = ScheduleObject()
                     obj.identify = 2
                     obj.time_from = ""
                     obj.time_to = ""
                     self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
     
                 
             }
@@ -4036,11 +4113,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 3 }) {
                 
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 4
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
                 
                 
             }
@@ -4064,11 +4145,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 5 }) {
                 
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 6
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
                 
                 
             }
@@ -4091,11 +4176,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 7 }) {
                 
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 8
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
                 
                 
             }
@@ -4117,11 +4206,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 9 }) {
                 
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 10
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
                 
                 
             }
@@ -4143,11 +4236,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 11 }) {
                 
+                
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 12
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                }
                 
                 
             }
@@ -4171,11 +4268,15 @@ class ReceiveJobsViewController: UIViewController, UITableViewDataSource, UITabl
             
             if let index = self.availTimeArray.firstIndex(where: { $0.mainIdentify == 13 }) {
                 
+                if  self.availTimeArray[index].time_slots.count < 2 {
+
                 let obj = ScheduleObject()
                 obj.identify = 14
                 obj.time_from = ""
                 obj.time_to = ""
                 self.availTimeArray[index].time_slots.append(obj)
+                    
+                }
                 
                 
             }
